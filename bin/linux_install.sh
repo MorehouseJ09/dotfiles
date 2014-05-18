@@ -14,8 +14,8 @@ sudo apt-get install -y build-essential curl git ruby zsh \
     texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 
 # set default shell
-echo `which zsh` >> /etc/shells
-chsh -s `which zsh`
+sudo echo `which zsh` >> /etc/shells
+sudo chsh -s `which zsh`
 
 # setup dotfiles
 submodules
