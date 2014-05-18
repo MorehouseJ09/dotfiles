@@ -25,9 +25,7 @@ function install-virtualenv {
 	# make sure we are in a virtual environment first
 	if [ ! -d bin ]
 	then
-
 		virtualenv . 
-
 	fi
 
 	# source teh element

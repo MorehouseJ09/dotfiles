@@ -27,11 +27,10 @@ unsetopt cdablevarS
 unsetopt correct_all
 unsetopt nomatch
 
-# source our bash core 
-if [ $OSTYPE == "darwin13.0.0" ] ;then 
-    source $HOME/dotfiles/bin/mac_bootstrap.sh
-else # default to load linux
-    source $HOME/dotfiles/bin/linux_bootstrap.sh
+if [ -z "$DOTFILES_DIR" ]; then 
+	source $HOME/dotfiles/bin/bootstrap.sh
+else
+	source $DOTFILES_DIR/bin/bootstrap.sh
 fi
 
 compctl -k "()" brew install
