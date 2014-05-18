@@ -9,7 +9,9 @@ function submodules {
 
     # install linux brew if not on mac
     if [ "$OS" == "linux" ]; then
-        git clone git://github.com/homebrew/linuxbrew $HOME/.linuxbrew
+        if [ ! -d $HOME/.linuxbrew ];then
+            git clone git://github.com/homebrew/linuxbrew $HOME/.linuxbrew
+        fi
     fi
 
 }
@@ -18,7 +20,7 @@ function symlinks() {
     
     # install all symlinks to $HOME
     for dir in "$DOTFILES_DIR" "$PERSONAL_DIR"; do
-        if [ ! -d $dir ];then
+        if [ ! -d $dir ]; then
             continue
         fi
         echo $dir
@@ -29,20 +31,6 @@ function symlinks() {
 
 }
 
-# install dependencies [homebrew, homebrew formulae, casks, python, rubygems, npm modules]
-function dependencies {
-
-    #brew bundle $DOTFILES_DIR/dependencies/Brewfile
-    #pip install -r $DOTFILES_DIR/dependencies/requirements.txt
-    #cd $DOTFILES_DIR/dependencies && npm install -g
-
-    #if [ $OS == "mac" ];then
-        #while read line; do
-            #brew cask "$line"
-        #done < $DOTFILES_DIR/dependencies/Caskfile
-    #fi
-
-}
 
 
 

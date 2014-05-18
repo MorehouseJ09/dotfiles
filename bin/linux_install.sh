@@ -1,9 +1,12 @@
 # set os
 export OS="linux"
 
-# set dotfiles directory
+# set up defaults
 if [ -z "$DOTFILES_DIR" ]; then
     export DOTFILES_DIR=$HOME/dotfiles
+fi
+if [ -z "$PERSONAL_DIR" ]; then
+    export PERSONAL_DIR=$HOME/.personal
 fi
 source $DOTFILES_DIR/src/install.sh
 
