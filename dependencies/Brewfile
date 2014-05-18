@@ -1,14 +1,14 @@
+tap caskroom/cask
 tap caskroom/versions
-tap cask/cask
 tap homebrew/apache
 tap homebrew/binary
 tap homebrew/boneyard
 tap homebrew/dupes
+tap homebrew/versions
 tap jonmorehouse/tap
 update
 install aircrack-ng
 install ant
-install apple-gcc42
 install aspell
 install atk
 install autoconf
@@ -24,11 +24,13 @@ install bison
 install boost
 install boost-build
 install brew-cask
+install brew-gem
 install byobu
 install c-ares
 install cairo
 install celt
 install cloc
+install cloog
 install closure-compiler
 install cmake
 install concurrencykit
@@ -41,24 +43,28 @@ install dos2unix
 install doxygen
 install ec2-api-tools
 install elasticsearch
+install emacs
 install enchant
 install enscript
 install erlang
+install etcd
+install etcdctl
 install faac
 install fdk-aac
+install ffmpeg
 install flasm
 install fontconfig
 install freetype
 install fribidi
-install fruitstrap
+install gcc
 install gd
 install gdbm
 install gdk-pixbuf
 install gearman --with-postgresql
 install geoip
 install gettext
+install gh
 install ghc
-install ghi
 install ghostscript
 install gist
 install git
@@ -85,11 +91,13 @@ install gst-plugins-base
 install gst-plugins-good
 install gst-plugins-ugly
 install gstreamer
+install gtk+
 install gyp
 install haproxy
 install harfbuzz
 install haskell-platform
 install heroku-toolbelt
+install hiredis
 install htmlcompressor
 install htop-osx
 install hub
@@ -97,12 +105,14 @@ install icu4c
 install imagemagick
 install intltool
 install irssi
+install isl
 install jasper
 install jbig2dec
 install jpeg
 install jpegoptim
 install lame
 install lbdb
+install legit
 install leptonica
 install libaacs
 install libass
@@ -119,6 +129,7 @@ install libksba
 install libmpc
 install libmpdclient
 install libogg
+install libpcl
 install libplist
 install libpng
 install libpqxx
@@ -133,6 +144,8 @@ install libvpx
 install libwmf
 install libxml2
 install libyaml
+install libzip
+install lighttpd
 install links
 install little-cms
 install little-cms2
@@ -147,10 +160,11 @@ install mcrypt
 install md5sha1sum
 install memcached
 install mercurial
-install mongodb
+install mhash
 install mongoose
 install mpc
 install mpfr
+install mplayer
 install mutt --with-trash-patch
 install mydumper
 install mysql
@@ -181,7 +195,6 @@ install pil
 install pipebench
 install pixman
 install pkg-config
-install pmd
 install png2ico
 install pngpaste
 install pngquant
@@ -236,13 +249,15 @@ install unixodbc
 install unrar
 install unrtf
 install urlview
-install vim --override-system-vi
+install vim --with-python3
 install watch
 install webkit2png
+install weechat --with-ruby --with-python --with-perl
 install wget
 install wireshark
 install wkhtmltopdf
 install wv
+install wxmac
 install x264
 install xcproj
 install xctool

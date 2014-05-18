@@ -1,0 +1,68 @@
+###
+### Initialize general BASH settings
+###
+# HISTORY FILE SIZE
+HISTFILESIZE=1000000000
+HIST_VERIFY="false"
+HISTSIZE=1000000
+
+# SYSTEM STUFF
+EDITOR='vim'
+
+PATH=$DOTFILES_DIR/scripts:$PATH
+
+### 
+###  Python setup
+### 
+#source `which virtualenvwrapper.sh`
+PYTHONSTARTUP=$HOME/.python_startup.py
+
+### 
+### Initialize GO Settings
+###
+# our go package location
+GOPATH=$HOME/go
+PATH=$GOPATH/bin:$PATH
+
+###
+### Initialize RVM script 
+###
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+
+###
+### EC2 SETTINGS
+###
+EC2_URL=ec2.us-west-1.amazonaws.com
+EC2_UBUNTU_AMI=ami-660c3023
+EC2_DOCKER_AMI=ami-ac6942e9
+AWS_REGION=us-west-1
+AWS_DEFAULT_REGION=$AWS_REGION
+
+
+###
+### Redis
+###
+REDIS_PORT=6379
+REDIS_HOST=localhost
+
+###
+### Etcd 
+###
+ETCD_PORT=4001
+ETCD_HOST=localhost
+
+###
+### Docker Configuration
+###
+DOCKER_HOST=tcp://localhost:4243
+
+### 
+### DEFAULT SSH KEY SETTINGS
+### 
+SSH_PRIVATE_KEY=$HOME/.ssh/id_rsa
+# download aws keypair and run: `ssh-keygen -y -f KEYFILE.pem` to create public key
+SSH_PUBLIC_KEY=$HOME/.ssh/id_rsa.pub
+# this is the key file that is used for sshing in (set in .ssh/config)
+SSH_IDENTITY_FILE=$HOME/.ssh/id_rsa
+
+

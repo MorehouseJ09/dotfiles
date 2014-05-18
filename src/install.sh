@@ -18,6 +18,9 @@ function symlinks() {
     
     # install all symlinks to $HOME
     for dir in "$DOTFILES_DIR" "$PERSONAL_DIR"; do
+        if [ ! -d $dir ];then
+            continue
+        fi
         for symlink in $(ls $dir/symlinks); do
             ln -f -s $dir/symlinks/$symlink $HOME/.$symlink
         done 
@@ -30,10 +33,13 @@ function dependencies {
 
     #brew bundle $DOTFILES_DIR/dependencies/Brewfile
     #pip install -r $DOTFILES_DIR/dependencies/requirements.txt
+    #cd $DOTFILES_DIR/dependencies && npm install -g
 
-    if [ $OS == "mac" ];then
-        echo "install casks"
-    fi
+    #if [ $OS == "mac" ];then
+        #while read line; do
+            #brew cask "$line"
+        #done < $DOTFILES_DIR/dependencies/Caskfile
+    #fi
 
 }
 
