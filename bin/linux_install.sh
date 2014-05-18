@@ -3,10 +3,9 @@ export OS="linux"
 
 # set dotfiles directory
 if [ -z "$DOTFILES_DIR" ]; then
-	source $DOTFILES_DIR/src/install.sh
-else # recommended dotfiles directory 
-	source $HOME/dotfiles/src/install.sh
+    export DOTFILES_DIR=$HOME/dotfiles
 fi
+source $DOTFILES_DIR/src/install.sh
 
 # install dependencies for homebrew / environment
 sudo apt-get update

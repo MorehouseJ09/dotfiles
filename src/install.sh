@@ -21,6 +21,7 @@ function symlinks() {
         if [ ! -d $dir ];then
             continue
         fi
+        echo $dir
         for symlink in $(ls $dir/symlinks); do
             ln -f -s $dir/symlinks/$symlink $HOME/.$symlink
         done 
