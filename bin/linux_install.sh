@@ -17,7 +17,9 @@ sudo apt-get install -y build-essential curl git ruby zsh \
 sudo echo `which zsh` >> /etc/shells
 sudo chsh -s `which zsh`
 
-# setup dotfiles
+# load installation functions
+source $DOTFILES_DIR/src/install.sh
 submodules
 symlinks
+
 
