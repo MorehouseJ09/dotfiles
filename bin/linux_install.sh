@@ -9,6 +9,7 @@ else # recommended dotfiles directory
 fi
 
 # install dependencies for homebrew / environment
+sudo apt-get update
 sudo apt-get install -y build-essential curl git ruby zsh \
     texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
 
