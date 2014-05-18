@@ -8,17 +8,15 @@ else # recommended dotfiles directory
 	source $HOME/dotfiles/src/install.sh
 fi
 
-# install dependencies for homebrew
-sudo apt-get install -y sudo apt-get install build-essential curl git ruby \
+# install dependencies for homebrew / environment
+sudo apt-get install -y build-essential curl git ruby zsh \
     texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
+
+# set default shell
+echo `which zsh` >> /etc/shells
+chsh -s `which zsh`
 
 # setup dotfiles
 submodules
 symlinks
-
-# load up environment before installing dependencies
-source $DOTFILES_DIR/bin/bootstrap.sh
-
-dependencies
-
 
