@@ -7,7 +7,11 @@
 ~~~ sh
 $ git clone --recursive git@github.com:jonmorehouse/dotfiles $HOME/dotfiles
 
-# install for your machine (mac/ubuntu)
+# or install to a different directory
+$ git clone --recursive git@github.com:jonmorehouse/dotfiles ~/some_dir
+$ export DOTFILES_DIR=~/some_dir
+
+# now bootstrap the installation to set up all symlinks, dependencies etc
 $ ./bin/mac_install
 ~~~
 
