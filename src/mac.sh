@@ -47,6 +47,5 @@ function power {
 	$0 ~ "MaxCapacity" {a=$5;next}	
 	$0 ~ "CurrentCapacity" {b=$5;nextfile}
 	END{printf("%.2f", b/a * 100);print("%")}'
-
 }
 

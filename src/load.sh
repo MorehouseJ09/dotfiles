@@ -1,14 +1,16 @@
-# include the global helpers 
-local_directory=~/dotfiles/helpers
+src_dir=$DOTFILES_DIR/src
 
 # any files that you want ignored go here!
 ignored=(
-
 	"load.sh"
+	"install.sh"
+	"bootstrap.sh" 
 	"zshell-theme.zsh"
+	"mac.sh"
+	"linux.sh"
 )
 
-for file in `ls $local_directory`
+for file in `ls $src_dir`
 do
 
 	found=
@@ -16,7 +18,6 @@ do
 	do
 		if [ "$ignore" = "$file" ]
 		then
-
 			let found=true
 		fi
 	done
@@ -24,15 +25,18 @@ do
 	# if the file shuold have been ignored - then go ahead and skip this $file
 	if [ "$found" ]
 	then
-
 		continue
-
-	# if not flagged - then load the file
+	# if not banned, load the file
 	else
-		load $local_directory/$file
+		load $src_dir/$file
 	fi
 done
 
-# clean up any variables that may cause bash shell weirdness
-local_directory=
+# load mac / linux specific if necessary
+if [ $OS == "mac" ] ;then 
+    load $src_dir/mac.sh
+else # default to load linux
+    load $src_dir/linux.sh
+fi
+
 
