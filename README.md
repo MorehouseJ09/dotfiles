@@ -11,8 +11,11 @@ $ git clone --recursive git@github.com:jonmorehouse/dotfiles $HOME/dotfiles
 $ git clone --recursive git@github.com:jonmorehouse/dotfiles ~/some_dir
 $ export DOTFILES_DIR=~/some_dir
 
-# now bootstrap the installation to set up all symlinks, dependencies etc
+# install and set up a mac
 $ ./bin/mac_install
+
+# install and set up linux - tested and developed primarily for ubuntu 12.04
+$ ./bin/linux_install
 ~~~
 
 ## Project Structure
@@ -25,11 +28,15 @@ $ ./bin/mac_install
 
 ## Customizing
 
-This project depends upon a "personal" directory with the same structure. I recommend placing this in `$HOME/.personal`. Install script will symlink all personal/symlinks. Bootstrap script will load all personal/src
+This project depends upon a "personal" directory with the same structure as this project. 
+
+I recommend placing this in `$HOME/.personal`. Installation will symlink all `personal/symlinks` to `$HOME/` and will source all files in `personal/src` on startup.
 
 ## ENV Files
 
-I usually have env settings for different work environments, for instance a personal env and a work environment. In my `$HOME/.personal/symlinks` I keep a `personal.env` file and a `work.env` file with settings for each environment. By setting the environment variable `EXPORTS_FILE` you can specify a default environment to be bootstrapped at terminal startup.
+I usually have env settings for different work environments, for instance a personal env and a work environment. In my `$HOME/.personal/symlinks` I keep a `personal.env` file and a `work.env` file with settings for each environment. 
+
+By setting the environment variable `EXPORTS_FILE` you can specify a default environment to be bootstrapped at terminal startup.
 
 ## References / Inspiration
 
