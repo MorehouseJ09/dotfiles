@@ -12,10 +12,13 @@ $ git clone --recursive git@github.com:jonmorehouse/dotfiles ~/some_dir
 $ export DOTFILES_DIR=~/some_dir
 
 # install and set up a mac
-$ ./bin/mac_install
+$ ./bin/mac_install.sh
 
 # install and set up linux - tested and developed primarily for ubuntu 12.04
-$ ./bin/linux_install
+$ ./bin/linux_install.sh
+
+# now install all dependencies (this will take a while and isn't required)
+$ ./bin/dependencies.sh # install brews,casks,pips,gems,npms and vim
 ~~~
 
 ## Project Structure
