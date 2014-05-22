@@ -13,7 +13,6 @@ function submodules {
             git clone git://github.com/homebrew/linuxbrew $HOME/.linuxbrew
         fi
     fi
-
 }
 
 function symlinks() {
@@ -23,7 +22,6 @@ function symlinks() {
         if [ ! -d $dir ]; then
             continue
         fi
-        echo $dir
         for symlink in $(ls $dir/symlinks); do
             ln -f -s $dir/symlinks/$symlink $HOME/.$symlink
         done 

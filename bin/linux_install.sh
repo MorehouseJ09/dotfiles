@@ -1,3 +1,5 @@
+#!/usr/bin/zsh
+
 # set os
 export OS="linux"
 
@@ -10,7 +12,7 @@ if [ -z "$PERSONAL_DIR" ]; then
 fi
 source $DOTFILES_DIR/src/install.sh
 
-# install dependencies for homebrew / environment
+## install dependencies for homebrew / environment
 sudo apt-get update
 sudo apt-get install -y build-essential curl git ruby zsh \
     texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
@@ -20,8 +22,7 @@ sudo gem install rake
 sudo ln -s `which rake` /usr/bin/rake
 
 # set default shell
-sudo echo `which zsh` >> /etc/shells
-sudo chsh -s `which zsh`
+sudo chsh -s /usr/bin/zsh
 
 # load installation functions
 source $DOTFILES_DIR/src/install.sh
