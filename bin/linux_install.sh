@@ -19,7 +19,6 @@ sudo apt-get install -y build-essential curl git ruby zsh \
 sudo gem install rake
 sudo ln -s `which rake` /usr/bin/rake
 
-
 # set default shell
 sudo echo `which zsh` >> /etc/shells
 sudo chsh -s `which zsh`
@@ -28,5 +27,4 @@ sudo chsh -s `which zsh`
 source $DOTFILES_DIR/src/install.sh
 submodules
 symlinks
-
 

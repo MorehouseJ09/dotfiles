@@ -1,14 +1,18 @@
 # set os
 export OS="mac"
 
-# set dotfiles directory
+# set up defaults
 if [ -z "$DOTFILES_DIR" ]; then
-	source $DOTFILES_DIR/src/install.sh
-else
-	source $HOME/dotfiles/src/install.sh
+    export DOTFILES_DIR=$HOME/dotfiles
+fi
+if [ -z "$PERSONAL_DIR" ]; then
+    export PERSONAL_DIR=$HOME/.personal
 fi
 
+# source install functions 
+source $DOTFILES_DIR/src/install.sh
+
+# now call install functions as needed
 submodules
 symlinks
-dependencies
 
