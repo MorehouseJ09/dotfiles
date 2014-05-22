@@ -1,5 +1,5 @@
 ###
-###	Navigation Shortcuts
+### Navigation Shortcuts
 ###
 # basic navigation helpers
 alias ~='cd ~'
@@ -10,7 +10,17 @@ alias ....='cd ../../../..'
 alias back='cd -'
 
 ###
-###	Directory View Shortcuts
+### Tmux shortcut aliases
+###
+alias tn='tmux new-session -s'
+alias ta='tmux attach-session -t'
+alias tl='tmux list-sessions'
+alias tka='tmux kill-server'
+alias tr='tmux source-file ~/.tmux.conf'
+alias tk='tmux kill-window -t '
+
+###
+### Directory View Shortcuts
 ###
 alias lsa='ls -lah'
 alias l='ls -lA1'
@@ -24,7 +34,7 @@ alias sl=ls # often screw this up
 alias lr='ls -lR'
 
 ###
-### 	General Shortcuts
+###     General Shortcuts
 ###
 # Show history
 alias history='fc -l 1'
@@ -49,4 +59,5 @@ do
   command="awk '{ print \$$i }'"
   eval alias "awk$i"='${command}'
 done
+
 
