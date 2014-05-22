@@ -22,7 +22,8 @@ sudo gem install rake
 sudo ln -sf `which rake` /usr/bin/rake
 
 # set default shell
-#sudo chsh -s /usr/bin/zsh
+sudo sh -c 'echo "/usr/bin/zsh" > /etc/shells'
+sudo sh -c 'chsh -s /usr/bin/zsh'
 
 # load installation functions
 source $DOTFILES_DIR/src/install.sh
