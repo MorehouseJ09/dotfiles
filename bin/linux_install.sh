@@ -1,5 +1,9 @@
 #!/usr/bin/zsh
 
+# set default shell
+sudo sh -c 'echo "/usr/bin/zsh" > /etc/shells'
+sudo sh -c 'chsh -s /usr/bin/zsh'
+
 # set os
 export OS="linux"
 
@@ -21,9 +25,6 @@ sudo apt-get install -y build-essential curl git ruby zsh \
 sudo gem install rake
 sudo ln -sf `which rake` /usr/bin/rake
 
-# set default shell
-sudo sh -c 'echo "/usr/bin/zsh" > /etc/shells'
-sudo sh -c 'chsh -s /usr/bin/zsh'
 
 # load installation functions
 source $DOTFILES_DIR/src/install.sh
