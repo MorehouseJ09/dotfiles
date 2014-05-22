@@ -4,4 +4,3 @@
 [submodule "git-template"]
 	path = git-template
 	url = git@github.com:jonmorehouse/git-template
-

@@ -19,10 +19,10 @@ sudo apt-get install -y build-essential curl git ruby zsh \
 
 # set up rake for homebrew to use properly
 sudo gem install rake
-sudo ln -s `which rake` /usr/bin/rake
+sudo ln -sf `which rake` /usr/bin/rake
 
 # set default shell
-sudo chsh -s /usr/bin/zsh
+#sudo chsh -s /usr/bin/zsh
 
 # load installation functions
 source $DOTFILES_DIR/src/install.sh

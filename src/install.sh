@@ -1,6 +1,6 @@
 function submodules {
 
-    git submodule foreach --recursive git submodule update --init
+    git submodule update --init --recursive
     
     # install oh-my-zshell
     if [ ! -d $HOME/.oh-my-zsh ]; then
@@ -8,10 +8,8 @@ function submodules {
     fi
 
     # install linux brew if not on mac
-    if [ "$OS" == "linux" ]; then
-        if [ ! -d $HOME/.linuxbrew ];then
-            git clone git://github.com/homebrew/linuxbrew $HOME/.linuxbrew
-        fi
+    if [[ "$OS" = "linux" && ! -d $HOME/.linuxbrew ]]; then
+        git clone git://github.com/homebrew/linuxbrew $HOME/.linuxbrew
     fi
 }
 
