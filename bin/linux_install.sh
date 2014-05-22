@@ -32,7 +32,7 @@ symlinks
 # finally, set up some of our main development directories as fit
 for i in "programs" ".public"
 do
-    if not [ -d $HOME/$i ]; then
+    if [ ! -d $HOME/$i ]; then
         mkdir $HOME/$i
     fi
 done
