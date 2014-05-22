@@ -6,12 +6,12 @@ src_dir=$DOTFILES_DIR/src
 function load {
     # return if not a file
     if [[ ! -e "${1}" ]]; then
-		echo "File not found. ${1}"
+        echo "File not found. ${1}"
         return
     fi
 
     # load environment vars if .exports or .env
-    if [[ "${1}" = "*.env" || "${1}" = "*.exports" ]];then
+    if [[ "${1}" = *.env || "${1}" = *.exports ]];then
         \. $DOTFILES_DIR/scripts/load_env_file "${1}"
     else
         source "${1}"
@@ -20,14 +20,14 @@ function load {
 
 # list of shared files for sourcing
 files=(
-	# initialize system profile
-	/etc/profile
+    # initialize system profile
+    /etc/profile
 
-	# load rvm script
-	$HOME/.rvm/scripts/rvm
+    # load rvm script
+    $HOME/.rvm/scripts/rvm
 
-	# global zsh source files
-	$src_dir/load.sh 
+    # global zsh source files
+    $src_dir/load.sh 
 )
 
 

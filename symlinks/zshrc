@@ -28,9 +28,9 @@ unsetopt correct_all
 unsetopt nomatch
 
 if [ -z "$DOTFILES_DIR" ]; then 
-	source $HOME/dotfiles/bin/bootstrap.sh
+	\. $HOME/dotfiles/bin/bootstrap.sh
 else
-	source $DOTFILES_DIR/bin/bootstrap.sh
+	\. $DOTFILES_DIR/bin/bootstrap.sh
 fi
 
 compctl -k "()" brew install
