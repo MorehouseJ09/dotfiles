@@ -5,8 +5,17 @@ if (( $+commands[keychain] )); then
     eval `keychain --eval -q`
     export GPG_PID=`echo $GPG_AGENT_INFO | awk '{ split($0,a,":"); print a[2] }'`
     
+    # handle gpg_processes
+    gpg_file="/tmp/gpg_agents"
+
+    # now store this current tty/pid in /tmp/gpg_agents
+    echo "$(tty) $GPG_PID" >> $gpg_file
+
     # export GPG_TTY so that this tty is used here locally
     export GPG_TTY=$(tty)
-fi
 
+    # update pinentry tty to use current tty
+    echo UPDATESTARTUPTTY | gpg-connect-agent
+
+fi
 
