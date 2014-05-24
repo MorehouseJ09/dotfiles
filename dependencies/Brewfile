@@ -151,8 +151,6 @@ install little-cms
 install little-cms2
 install llvm
 install lua
-install lynx
-install macvim
 install make
 install man2html
 install maven
