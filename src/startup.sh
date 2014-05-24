@@ -15,7 +15,5 @@ if (( $+commands[keychain] )); then
     export GPG_TTY=$(tty)
 
     # update pinentry tty to use current tty
-    echo UPDATESTARTUPTTY | gpg-connect-agent
-
+    echo UPDATESTARTUPTTY | gpg-connect-agent >> /dev/null
 fi
-
