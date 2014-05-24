@@ -29,9 +29,7 @@ if (( $+commands[keychain] )); then
             kill -9 "$current_pid"
         elif [[ $current_tty = $GPG_TTY && ! $current_pid = $GPG_PID ]]; then
             kill -9 "$current_pid"
-        else 
-            
-            # keep storing the process
+        else # keep storing the process
             echo $p
             echo $p >> $gpg_file.tmp
         fi
