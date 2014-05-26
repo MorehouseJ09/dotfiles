@@ -5,10 +5,15 @@
 HISTFILESIZE=1000000000
 HIST_VERIFY="false"
 HISTSIZE=1000000
+# export prompt - zsh-theme.zsh  doesn't play to nice with prompt, so export forcefully!
+PROMPT='%(!.%{$fg_bold[white]%}.%{$fg_bold[white]%})%{$fg_bold[white]%}$(machine_name)$(path_tail 2) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 
 # SYSTEM STUFF
 EDITOR='vim'
 
+###
+### Custom paths to be included
+###
 PATH=$DOTFILES_DIR/scripts:$PATH
 
 ### 
