@@ -4,6 +4,14 @@
 
 My local development stack includes zsh,tmux,vim,weechat,mutt,gpg and pass
 
+## Solarized
+
+I only use solarized, so this project assumes that you will have configured your terminal to use the solarized colorscheme. Things will probably look weird without it.
+
+* [General Installation](http://ethanschoonover.com/solarized)
+* [Chromebook / Secure Shell Installation](https://github.com/yuex/chrome-secure-shell-solarized)
+
+
 ## Installation Instructions
 
 ~~~ sh
