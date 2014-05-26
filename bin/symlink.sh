@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # load the installer script
 if [ -z "$DOTFILES_DIR" ]; then
     export DOTFILES_DIR=$HOME/dotfiles
