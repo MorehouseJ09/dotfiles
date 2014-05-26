@@ -66,9 +66,9 @@ I don't use ssh-agent anymore, instead opting to use keychain and gpg-agent for 
 $ ln -sf $HOME/.gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 ~~~
 
-
 ## References / Inspiration
 
 * [dotfiles.github.io](http://dotfiles.github.io/)
 * [Adam V Dotfiles](https://github.com/adamv/dotfiles)
+* [Enable SSH on Chromebook](https://github.com/dnschneid/crouton/wiki/Running-servers-in-crouton)
 
