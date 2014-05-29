@@ -10,5 +10,23 @@ function machine_name {
     fi
 }
 
+function prompt_path {
+    
+    current_prefix=""
+    # normalize the path to use a tilda!
+    if [[ $(pwd) = $HOME* ]]; then
+        current_prefix="~" 
+    fi
+   
+    # generate correct body
+    if [[ $(pwd) = $HOME ]];then
+        body=""
+    else
+        # grab main body
+        body=`pwd | sed 's|'$HOME'||g' | awk '{ n=split($1,a,"/")} END{ print a[n-1] "/" a[n] }'`
+    fi
+    
+    echo "${current_prefix}${body}"
+}
+
 ZSH_THEME_GIT_PROMPT_PREFIX="("
-ZSH_THEME_GIT_PROMPT_SUFFIX=") "
