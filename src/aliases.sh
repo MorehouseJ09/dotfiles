@@ -18,6 +18,7 @@ alias tl='tmux list-sessions'
 alias tka='tmux kill-server'
 alias tr='tmux source-file ~/.tmux.conf'
 alias tk='tmux kill-window -t '
+alias talt='TMUX_CONF=$HOME/.alt.tmux.conf tmux'
 
 ###
 ### Directory View Shortcuts
