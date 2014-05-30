@@ -66,6 +66,11 @@ I don't use ssh-agent anymore, instead opting to use keychain and gpg-agent for 
 $ ln -sf $HOME/.gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 ~~~
 
+### Automatically enter passphrases
+
+While only recommended for safe working conditions, adding your passphrases to $HOME/.passphrase will automatically set them on the agent. This should prevent you from ever having to enter gpg/ssh keys while working. Simply removing the file will force manual entry.
+
+
 ## References / Inspiration
 
 * [dotfiles.github.io](http://dotfiles.github.io/)
