@@ -18,7 +18,7 @@ if (( $+commands[keychain] )); then
     echo UPDATESTARTUPTTY | gpg-connect-agent >> /dev/null
 
     # run gpg-bootstrap if we have a .passphrase file
-    if [ -f $HOME/.passphrase ]; then 
-        gpg-bootstrap 
+    if [[ -f $HOME/.passphrase ]]; then 
+        gpg-bootstrap 2&>1 > /dev/null
     fi
 fi
