@@ -16,4 +16,9 @@ if (( $+commands[keychain] )); then
 
     # update pinentry tty to use current tty
     echo UPDATESTARTUPTTY | gpg-connect-agent >> /dev/null
+
+    # run gpg-bootstrap if we have a .passphrase file
+    if [ -f $HOME/.passphrase ]; then 
+        gpg-bootstrap 
+    fi
 fi
