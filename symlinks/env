@@ -54,7 +54,9 @@ REDIS_HOST=localhost
 ### Etcd 
 ###
 ETCD_PORT=4001
-ETCD_HOST=localhost
+ETCD_HOST=$(echo $DOCKER_HOST | awk -F':' '{ print $2 }' | sed "s|/||g")
+
+localhost
 
 ###
 ### Docker Configuration
