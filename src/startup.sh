@@ -22,3 +22,9 @@ if (( $+commands[keychain] )); then
         gpg-bootstrap 2>&1 > /dev/null
     fi
 fi
+
+if (( $+commands[docker-osx] )); then
+  eval `docker-osx env`  
+fi
+
+
