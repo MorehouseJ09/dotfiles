@@ -61,4 +61,9 @@ do
   eval alias "awk$i"='${command}'
 done
 
+# set current alias
+if [[ -f $HOME/.current ]];then
+  dir=`cat $HOME/.current`
+  eval alias "cr='cd ${dir}'"
+fi
 
