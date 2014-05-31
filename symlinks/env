@@ -59,7 +59,7 @@ ETCD_HOST=localhost
 ###
 ### Docker Configuration
 ###
-DOCKER_HOST=tcp://localhost:4243
+DOCKER_HOST=$(if [[ -z $DOCKER_HOST ]]; then echo $(tcp://localhost:4243); else echo $DOCKER_HOST;fi)
 
 ### 
 ### DEFAULT SSH KEY SETTINGS
