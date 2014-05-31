@@ -70,6 +70,9 @@ $ ln -sf $HOME/.gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 
 While only recommended for safe working conditions, adding your passphrases to $HOME/.passphrase will automatically set them on the agent. This should prevent you from ever having to enter gpg/ssh keys while working. Simply removing the file will force manual entry.
 
+## Current Alias
+
+You can optionally add a single path to `$HOME/.current` to create a cr alias to cd to your current project.
 
 ## References / Inspiration
 
