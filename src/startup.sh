@@ -24,7 +24,7 @@ if (( $+commands[keychain] )); then
 fi
 
 if (( $+commands[docker-osx] )); then
-  eval `docker-osx env`  
+    eval `docker-osx env`  
 fi
 
 
