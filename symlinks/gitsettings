@@ -27,6 +27,7 @@
   cl = clone
   clr = clone --recursive
   sc = submodule update --init
+  sin = submodule update --init
   sup = submodule foreach "git fetch && git stash && git checkout origin/master"
   # clone into the public project repository list
   clp = !sh -c 'cd $HOME/.public && hub clone "$@"' -
