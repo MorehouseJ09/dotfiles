@@ -23,3 +23,12 @@ symlinks
 # configure osx dock so that login.sh works properly
 f=/System/Library/CoreServices/Dock.app/Contents/Resources/DockMenus; sudo cp $f.plist $f-old.plist; sudo defaults write $f finder-running -array-add '<dict><key>command</key><integer>1004</integer><key>name</key><string>REMOVE_FR‌OM_DOCK</string></dict>'; sudo chmod 644 $f.plist; osascript -e 'quit app "Dock"'
 f=/System/Library/CoreServices/Dock.app/Contents/Resources/DockMenus; sudo cp $f.plist $f-old.plist; sudo defaults write $f trash -array-add '<dict><key>command</key><integer>1004</integer><key>name</key><string>REMOVE_FR‌OM_DOCK</string></dict>'; sudo chmod 644 $f.plist; osascript -e 'quit app "Dock"'
+
+# real developers don't use finder / spotlight :)
+sudo sh -c "mdutil -a -i off"
+# remove old index folder
+if [[ -d /.Spotlight-100 ]];then
+  rm -rf /.Spotlight-100
+fi
+
+
