@@ -1,8 +1,3 @@
-# system wide aliases
-alias se='apt-cache search'
-alias in='sudo apt-get install -y'
-alias pur='sudo apt-get purge -y'
-
 # general one-liners
 alias export_display='export DISPLAY=:0'
 
