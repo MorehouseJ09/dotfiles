@@ -40,7 +40,7 @@
   # add helpers
   a = add
   aa = add --all
-  af = add --force 
+  af = add --force --all
 
   # status + logs
   s = status --short --branch
