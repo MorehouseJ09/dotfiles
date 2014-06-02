@@ -61,7 +61,7 @@ localhost
 ###
 ### Docker Configuration
 ###
-DOCKER_HOST=$(if [[ -z $DOCKER_HOST ]]; then echo $(tcp://localhost:4243); else echo $DOCKER_HOST;fi)
+DOCKER_HOST=$(if [[ -z $DOCKER_HOST ]]; then $(echo tcp://localhost:4243); else echo $DOCKER_HOST;fi)
 
 ### 
 ### DEFAULT SSH KEY SETTINGS
