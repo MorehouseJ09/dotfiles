@@ -1,0 +1,5 @@
+Image/JPEG; view_attachment %s
+Image/PNG; view_attachment %s
+Image/GIF; view_attachment %s
+Application/PDF; view_attachment %s
+text/html; view_attachment %s html
