@@ -43,4 +43,6 @@ then
     load $EXPORTS_FILE
 fi
 
+# load in temp environment file
+load $HOME/.temp.env
 
