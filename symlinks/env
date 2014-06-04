@@ -43,25 +43,23 @@ EC2_DOCKER_AMI=ami-ac6942e9
 AWS_REGION=us-west-1
 AWS_DEFAULT_REGION=$AWS_REGION
 
-
 ###
-### Redis
+### Docker Configuration
 ###
-REDIS_PORT=6379
-REDIS_HOST=localhost
+DOCKER_HOST=$(if [[ -z $DOCKER_HOST ]]; then echo "tcp://localhost:4243"; else echo $DOCKER_HOST;fi)
+CONTAINER_HOST=$(if [[ ! -z $CONTAINER_HOST ]]; then echo $CONTAINER_HOST; else echo $DOCKER_HOST | awk -F':' '{ print $2 }' | sed "s|/||g"; fi)
 
 ###
 ### Etcd 
 ###
 ETCD_PORT=4001
-ETCD_HOST=$(echo $DOCKER_HOST | awk -F':' '{ print $2 }' | sed "s|/||g")
-
-localhost
+ETCD_HOST=$CONTAINER_HOST
 
 ###
-### Docker Configuration
+### Redis
 ###
-DOCKER_HOST=$(if [[ -z $DOCKER_HOST ]]; then echo "tcp://localhost:4243"; else echo $DOCKER_HOST;fi)
+REDIS_PORT=6379
+REDIS_HOST=$CONTAINER_HOST
 
 ### 
 ### DEFAULT SSH KEY SETTINGS
