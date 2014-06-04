@@ -1,15 +1,15 @@
 # Images
-image/jpeg; ~/.muttfiles/plugins/view_attachment.sh %s "-" /Applications/Preview.app;
-image/pjpeg; ~/.muttfiles/pluginsview_attachment.sh %s "-" /Applications/Preview.app;
-image/png; ~/.muttfiles/plugins/view_attachment.sh %s "-" /Applications/Preview.app;
-image/gif; ~/.muttfiles/plugins/view_attachment.sh %s "-" /Applications/Preview.app;
+image/jpeg; view_attachment %s "-" /Applications/Preview.app;
+image/pjpeg; view_attachment %s "-" /Applications/Preview.app;
+image/png; view_attachment %s "-" /Applications/Preview.app;
+image/gif; view_attachment %s "-" /Applications/Preview.app;
 
 # PDF
-application/pdf; ~/.muttfiles/plugins/view_attachment.sh %s "-" /Applications/Preview.app;
+application/pdf; view_attachment %s "-" /Applications/Preview.app;
 
 # HTML
 # -- always use lynx; it's gay to use safari for this
-#text/html; ~/.muttfiles/plugins/view_attachment.sh %s "-" /usr/local/bin/links;
+#text/html; view_attachment %s "-" /usr/local/bin/links;
 #text/html;                      links %s; nametemplate=%s.html
 #text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
 text/html; lynx -dump -width=78 -nolist %s; copiousoutput; needsterminal; nametemplate=%s.html
