@@ -13,6 +13,8 @@ alias back='cd -'
 ### Docker aliases
 ###
 alias ds='docker stop $(docker ps -a -q)'
+alias dp='docker ps'
+alias da='docker ps -a'
 
 ###
 ### Tmux aliases
