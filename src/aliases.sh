@@ -10,7 +10,12 @@ alias ....='cd ../../../..'
 alias back='cd -'
 
 ###
-### Tmux shortcut aliases
+### Docker aliases
+###
+alias ds='docker stop $(docker ps -a -q)'
+
+###
+### Tmux aliases
 ###
 alias tn='tmux new-session -s'
 alias ta='tmux attach-session -t'
