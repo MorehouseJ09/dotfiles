@@ -15,6 +15,7 @@ alias back='cd -'
 alias ds='docker stop $(docker ps -a -q)'
 alias dp='docker ps'
 alias da='docker ps -a'
+alias dd='docker rm $(docker ps -a -q)'
 
 ###
 ### Tmux aliases
