@@ -7,7 +7,6 @@ HIST_VERIFY="false"
 HISTSIZE=1000000
 # export prompt - zsh-theme.zsh  doesn't play to nice with prompt, so export forcefully!
 PROMPT='%(!.%{$fg_bold[white]%}.%{$fg_bold[white]%})%{$fg_bold[white]%}$(machine_name)$(prompt_path) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
-
 # SYSTEM STUFF
 EDITOR='vim'
 
@@ -15,7 +14,6 @@ EDITOR='vim'
 ### 
 ###  Python setup
 ### 
-#source `which virtualenvwrapper.sh`
 PYTHONSTARTUP=$HOME/.python_startup.py
 
 ### 
@@ -24,6 +22,10 @@ PYTHONSTARTUP=$HOME/.python_startup.py
 # our go package location
 GOPATH=$HOME/go
 
+### 
+### Tmux startup for platform specific functionality
+###
+TMUX_CONF=$HOME/.$OS.tmux.conf
 
 ###
 ### EC2 SETTINGS
