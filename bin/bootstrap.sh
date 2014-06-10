@@ -27,7 +27,7 @@ done
 
 # load default environment files
 load $HOME/.env
-load $HOME/.$OS.env
+load $HOME/.path.env
 
 # load personal files
 if [ -d $PERSONAL_DIR ]; then

@@ -46,6 +46,8 @@ alias lr='ls -lR'
 ###
 ###     General Shortcuts
 ###
+alias zsh-benchmark='/usr/bin/time /usr/bin/env zsh -i -c exit'
+
 # Show history
 alias history='fc -l 1'
 
