@@ -70,3 +70,8 @@ SSH_PUBLIC_KEY=$HOME/.ssh/id_rsa.pub
 # this is the key file that is used for sshing in (set in .ssh/config)
 SSH_IDENTITY_FILE=$HOME/.ssh/id_rsa
 
+[[ $OS == "mac" ]]
+[[ $OS == "linux" ]]
+[end]
+
+

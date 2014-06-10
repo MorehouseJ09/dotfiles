@@ -12,7 +12,7 @@ function load {
 
     # load environment vars if .exports or .env
     if [[ "${1}" = *.env || "${1}" = *.exports ]];then
-        \. $DOTFILES_DIR/scripts/load_env_file "${1}"
+        \. bashenv "${1}"
     else
         source "${1}"
     fi
