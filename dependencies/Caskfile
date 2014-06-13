@@ -5,11 +5,11 @@ install flowdock
 install google-chrome-canary
 install google-hangouts
 install handbrake
+install iterm2
 install java
 install keyremap4macbook
 install mactex
 install pandoc
-install pckeyboardhack
 install sizeup
 install skype
 install transmission
