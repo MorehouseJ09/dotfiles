@@ -8,12 +8,10 @@ if [ -z "$PERSONAL_DIR" ]; then
 fi
 
 # set os in script readable form
-if [ -z "$OS" ]; then
-    export OS="linux"
-    # load mac / linux specific if necessary
-    if [ $OSTYPE == "darwin13.0.0" ] ;then 
-        export OS="mac"
-    fi
+if [ $OSTYPE =~ darwin13* ] ;then 
+  export OS="mac"
+else
+  export OS="linux"
 fi
 
 # source the bootstrap lib
