@@ -1,3 +1,4 @@
+# initialize taps
 tap caskroom/cask
 tap caskroom/versions
 tap homebrew/apache
@@ -8,163 +9,87 @@ tap homebrew/versions
 tap jonmorehouse/tap
 update
 
-brew install npm
+# install primary applications
+install mutt --with-trash-patch
+install vim --with-python3
+install weechat --with-ruby --with-python --with-perl
 
+# install tools
+install bashenv
+install docker
+install docker-osx
+install etcd
+install etcdctl
+install node
+install pass
+install brew-cask
+install go
+install gpg-agent
+install hub
+install legit
+install python
+install python3
+install pngpaste
+install postgresql
+install rabbitmq
+install readline
+install sqlite
+install tmux
+install reattach-to-user-namespace
+install redis
+install ruby
+install wget
+install zeromq
+install tree
+install urlview
+install zsh
+
+# install libraries
 install autoconf
 install autojump
 install automake
 install bazaar
 install bcrypt
-install berkeley-db
-install bison
-install boost
-install boost-build
-install brew-cask
-install brew-gem
-install byobu
-install c-ares
-install cairo
-install celt
-install cloc
-install cloog
-install closure-compiler
 install cmake
-install concurrencykit
-install contacts
 install coreutils
-install cscope
-install curl
-install docker
-install dos2unix
-install doxygen
-install ec2-api-tools
-install elasticsearch
-install emacs
-install enchant
-install enscript
-install erlang
-install etcd
-install etcdctl
-install faac
-install fdk-aac
-install ffmpeg
-install flasm
-install fontconfig
-install freetype
-install fribidi
+install czmq
 install gcc
-install gd
 install gdbm
-install gdk-pixbuf
-install gearman --with-postgresql
-install geoip
 install gettext
-install gh
-install ghc
-install ghostscript
-install gist
-install git
-install glew
-install glib
-install glib-networking
-install glibmm
-install gmail-backup
-install gmp
+install gnu-getopt
 install gnu-sed
-install gnupg
+install gnupg2
 install gnutls
-install go
-install go-env
-install gobject-introspection
-install google-sparsehash
-install haproxy
-install haskell-platform
-install hiredis
-install htop-osx
-install hub
-install imagemagick
-install legit
-install leptonica
-install libev
 install libevent
 install libffi
 install libgcrypt
-install libgpg-error
-install libgsf
-install libiconv
-install libkate
-install libksba
-install libmpc
-install libmpdclient
-install libogg
-install libpcl
-install libplist
-install libpng
-install libpqxx
-install libsigc++
-install libsoup
-install libtasn1
-install libtiff
 install libtool
-install libvo-aacenc
-install libvorbis
-install libvpx
-install libwmf
-install libxml2
 install libyaml
-install libzip
-install lighttpd
-install links
-install llvm
-install lua
-install make
-install mcrypt
-install mercurial
-install mpc
-install mpfr
-install mutt --with-trash-patch
-install netcat
-install newt --with-python
-install nmap
-install node
-install opencore-amr
-install openjpeg
 install openssl
-
-install opus
-install orc
 install ossp-uuid
-
-install p11-kit
-install pango
-install parallel
 install pcre
-install pidof
-install pil
+install pinentry
 install pkg-config
-install pngpaste
-install postgresql
+install pth
 install pwgen
-install pyenv
-install pyenv-virtualenv
-install python
-install python3
-install rabbitmq
-install rabbitmq-c
-install readline
-install reattach-to-user-namespace
-install redis
-install ruby
-install s3cmd
-install sbcl
-install tmux
-install tree
-install unrar
-install urlview
-install vim --with-python3
-install watch
-install weechat --with-ruby --with-python --with-perl
-install wget
-install youtube-dl
-install zeromq
-install zsh
+
+# install cask files
+cask install alfred
+cask install iterm2
+cask install transmission
+cask install carbon-copy-cloner
+cask install java
+cask install vagrant
+cask install dropbox
+cask install keyremap4macbook
+cask install virtualbox
+cask install flowdock
+cask install mactex
+cask install vlc
+cask install google-chrome-canary
+cask install pandoc
+cask install xquartz
+cask install google-hangouts
+cask install sizeup
+cask install handbrake
+cask install skype
