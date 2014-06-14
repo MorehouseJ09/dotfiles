@@ -1,0 +1,16 @@
+# initialize taps
+tap caskroom/cask
+tap caskroom/versions
+tap homebrew/apache
+tap homebrew/binary
+tap homebrew/boneyard
+tap homebrew/dupes
+tap homebrew/versions
+tap jonmorehouse/tap
+update
+
+# install primary applications
+install mutt --with-trash-patch
+install vim --with-python3
+install weechat --with-ruby --with-python --with-perl
+

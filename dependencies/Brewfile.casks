@@ -1,0 +1,20 @@
+# install cask files
+cask install alfred
+cask install iterm2
+cask install transmission
+cask install carbon-copy-cloner
+cask install java
+cask install vagrant
+cask install dropbox
+cask install keyremap4macbook
+cask install virtualbox
+cask install flowdock
+cask install mactex
+cask install vlc
+cask install google-chrome-canary
+cask install pandoc
+cask install xquartz
+cask install google-hangouts
+cask install sizeup
+cask install handbrake
+cask install skype
