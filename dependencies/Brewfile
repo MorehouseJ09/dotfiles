@@ -1,4 +1,5 @@
 # install tools
+install keychain
 install bashenv
 install docker
 install docker-osx
