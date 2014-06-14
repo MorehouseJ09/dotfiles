@@ -1,3 +1,5 @@
+install brew-cask
+
 # install cask files
 cask install alfred
 cask install iterm2
