@@ -9,8 +9,14 @@ tap homebrew/versions
 tap jonmorehouse/tap
 update
 
-# install primary applications
+# primary cli applications
 install mutt --with-trash-patch
 install vim --with-python3
 install weechat --with-ruby --with-python --with-perl
+install tmux
+install reattach-to-user-namespace
+install urlview
 
+# git tools
+install hub
+install legit

@@ -9,8 +9,6 @@ install pass
 install brew-cask
 install go
 install gpg-agent
-install hub
-install legit
 install python
 install python3
 install pngpaste
@@ -18,14 +16,11 @@ install postgresql
 install rabbitmq
 install readline
 install sqlite
-install tmux
-install reattach-to-user-namespace
 install redis
 install ruby
 install wget
 install zeromq
 install tree
-install urlview
 install zsh
 
 # install libraries
