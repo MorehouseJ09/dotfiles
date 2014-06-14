@@ -23,9 +23,6 @@ files=(
     # initialize system profile
     /etc/profile
 
-    # load rvm script
-    $HOME/.rvm/scripts/rvm
-
     # global zsh source files
     $src_dir/load.sh 
 )
