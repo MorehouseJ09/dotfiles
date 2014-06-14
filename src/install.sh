@@ -27,6 +27,10 @@ function symlinks() {
 
 }
 
-
+function gpg_setup() {
+    gpg 
+    ln -sf $HOME/.gpg.conf $HOME/.gnupg/gpg.conf
+    ln -sf $HOME/.gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
+}
 
 

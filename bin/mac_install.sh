@@ -19,6 +19,7 @@ source $DOTFILES_DIR/src/install.sh
 # install components of machine as needed
 submodules
 symlinks
+gpg_setup
 
 # configure osx dock so that login.sh works properly
 f=/System/Library/CoreServices/Dock.app/Contents/Resources/DockMenus; sudo cp $f.plist $f-old.plist; sudo defaults write $f finder-running -array-add '<dict><key>command</key><integer>1004</integer><key>name</key><string>REMOVE_FROM_DOCK</string></dict>'; sudo chmod 644 $f.plist; osascript -e 'quit app "Dock"'
@@ -28,4 +29,5 @@ sudo defaults write com.apple.finder QuitMenuItem -bool YES
 # keep finder from restarting
 sudo mv /System/Library/CoreServices/Finder.app /Applications/
 sudo rm /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
+
 
