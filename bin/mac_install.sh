@@ -27,3 +27,5 @@ f=/System/Library/CoreServices/Dock.app/Contents/Resources/DockMenus; sudo cp $f
 sudo defaults write com.apple.finder QuitMenuItem -bool YES
 # keep finder from restarting
 sudo mv /System/Library/CoreServices/Finder.app /Applications/
+sudo rm /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
+
