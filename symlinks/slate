@@ -3,10 +3,6 @@
 # TODOs
 #   Spaces Actions
 #   fix SnapBack
-#   option to resize windows proportionally with Multiple Monitor actions
-#   option to resize window absolutely instead of relative to screen size with Center
-#   option to not resize window on Center
-#   SizeUp's "best effort" behavior
 
 ### Settings accessed through SizeUp's preferences window
 
@@ -91,6 +87,7 @@ alias LowerRight move ${quarterRightOrigin};${quarterDownOrigin} ${quarterRight}
 alias FullScreen move ${originX};${originY} ${sizeX};${sizeY}
 alias Center move ${centerOriginX};${centerOriginY} ${centerSizeX};${centerSizeY}
 
+
 alias SnapBack undo
 
 alias PrevMonitor throw previous
@@ -98,35 +95,33 @@ alias NextMonitor throw next
 
 # alias SpacePrev
 # alias SpaceNext
-
+bind 1:ctrl relaunch
 
 ### bindings / Shortcuts
 
-bind h:ctrl;alt;cmd ${Left}
-bind l:ctrl;alt;cmd ${Right}
-bind k:ctrl;alt;cmd ${Up}
-bind j:ctrl;alt;cmd ${Down}
+bind h:ctrl;cmd ${Left}
+bind l:ctrl;cmd ${Right}
+bind k:ctrl;cmd ${Up}
+bind j:ctrl;cmd ${Down}
 
-bind left:ctrl;alt;cmd  ${Left}
-bind right:ctrl;alt;cmd ${Right}
-bind up:ctrl;alt;cmd    ${Up}
-bind down:ctrl;alt;cmd  ${Down}
+bind left:ctrl;cmd  ${Left}
+bind right:ctrl;cmd ${Right}
+bind up:ctrl;cmd    ${Up}
+bind down:ctrl;cmd  ${Down}
 
-bind left:shift;ctrl;alt  ${UpperLeft}
-bind right:shift;ctrl;alt ${UpperRight}
-bind up:shift;ctrl;alt    ${LowerLeft}
-bind down:shift;ctrl;alt  ${LowerRight}
+bind left:shift;ctrl  ${UpperLeft}
+bind right:shift;ctrl ${UpperRight}
+bind up:shift;ctrl    ${LowerLeft}
+bind down:shift;ctrl  ${LowerRight}
 
-bind m:ctrl;alt;cmd ${FullScreen}
-bind c:ctrl;alt;cmd ${Center}
+bind m:ctrl;cmd ${FullScreen}
+bind c:ctrl;cmd ${Center}
 
-bind /:ctrl;alt;cmd ${SnapBack}
+bind /:ctrl;cmd ${SnapBack}
 
-bind h:ctrl;alt ${PrevMonitor}
-bind l:ctrl;alt ${NextMonitor}
+### Application switching bindings
+#bind g:ctrl;cmd focus 'Google Chrome Canary'
+#bind i:ctrl;cmd focus 'iMessage'
 
-bind left:ctrl;alt  ${PrevMonitor}
-bind right:ctrl;alt ${NextMonitor}
+#bind tab:cmd switch
 
-# bind h:ctrl;cmd ${SpacePrev}
-# bind l:ctrl;cmd ${SpaceNext}
