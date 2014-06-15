@@ -6,7 +6,7 @@ tap homebrew/binary
 tap homebrew/boneyard
 tap homebrew/dupes
 tap homebrew/versions
-tap jonmorehouse/tap
+tap 
 update
 
 # primary cli applications
