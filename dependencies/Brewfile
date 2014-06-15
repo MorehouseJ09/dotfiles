@@ -1,13 +1,10 @@
 # install tools
 install keychain
-install bashenv
 install docker
 install docker-osx
 install etcd
 install etcdctl
 install node
-install pass
-install brew-cask
 install go
 install gpg-agent
 install python
@@ -23,6 +20,10 @@ install wget
 install zeromq
 install tree
 install zsh
+install rbenv-use
+install ruby-build
+install pyenv
+install pyenv-virtualenv
 
 # install libraries
 install autoconf

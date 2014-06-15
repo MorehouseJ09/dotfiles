@@ -24,7 +24,18 @@ if (( $+commands[keychain] )); then
 fi
 
 if (( $+commands[docker-osx] )); then
-    eval `docker-osx env`  
+  eval $(docker-osx env)
 fi
 
+if (( $+commands[rbenv] ));then
+  eval "$(rbenv init -)"
+fi
+
+if (( $+commands[pro] ));then
+  # pro cd function
+  pcd() {
+    local projDir=$(pro search $1)
+    cd ${projDir}
+  }
+fi
 

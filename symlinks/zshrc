@@ -46,3 +46,4 @@ bindkey '^R' history-incremental-search-backward
 # history settings
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+

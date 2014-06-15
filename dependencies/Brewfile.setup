@@ -9,6 +9,12 @@ tap homebrew/versions
 tap 
 update
 
+# required for dotfiles ...
+install bashenv
+install brew-cask
+install python
+install ruby
+
 # primary cli applications
 install mutt --with-trash-patch
 install vim --with-python3
@@ -16,7 +22,10 @@ install weechat --with-ruby --with-python --with-perl
 install tmux
 install reattach-to-user-namespace
 install urlview
+install jonmorehouse/tap/pass
 
 # git tools
 install hub
 install legit
+install gist
+install ghi
