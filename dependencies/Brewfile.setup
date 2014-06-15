@@ -19,10 +19,12 @@ install ruby
 install mutt --with-trash-patch
 install vim --with-python3
 install weechat --with-ruby --with-python --with-perl
-install tmux
 install reattach-to-user-namespace
 install urlview
 install jonmorehouse/tap/pass
+# tmux setup is quite complex
+install tmux
+install tmux-mem-cpu-load
 
 # git tools
 install hub

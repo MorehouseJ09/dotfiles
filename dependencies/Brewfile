@@ -39,6 +39,7 @@ install gdbm
 install gettext
 install gnu-getopt
 install gnu-sed
+install homebrew/dupes/grep
 install gnupg2
 install gnutls
 install libevent
