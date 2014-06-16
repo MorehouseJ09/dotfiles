@@ -32,10 +32,13 @@ sudo mv /System/Library/CoreServices/Finder.app /Applications/
 sudo rm /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
 
 # never show dock 
-sudo defaults write com.apple.dock autohide-time-modifier -int 500; killall Dock
+sudo defaults write com.apple.dock autohide-time-modifier -int 500
 # reset to default
-sudo defaults delete com.apple.dock autohide-time-modifier; killall Dock
+sudo defaults delete com.apple.dock autohide-time-modifier
 # disable and remove dashboard
-sudo defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock
+sudo defaults write com.apple.dashboard mcx-disabled -boolean YES
 
+# restart applications as needed
+killall Dock
+killall Dashboard
 
