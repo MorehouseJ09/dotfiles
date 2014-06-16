@@ -116,7 +116,7 @@ $cli set keycode_int7 76
 /bin/echo -n .
 $cli set enable_int8 0
 /bin/echo -n .
-$cli set keycode_capslock 59
+$cli set keycode_capslock 80
 /bin/echo -n .
 $cli set enable_option_r 0
 /bin/echo -n .
