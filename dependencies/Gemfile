@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'chronic'
 gem 'personal-backlog'
 gem 't'
 gem 'cocoapods'
 gem 'tmuxinator'
-
+gem 'pro'
 
