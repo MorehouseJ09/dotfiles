@@ -6,7 +6,6 @@ fi
 if [ -z "$PERSONAL_DIR" ]; then
     export PERSONAL_DIR=$HOME/.personal
 fi
-
 # set os in script readable form
 if [ $OSTYPE =~ darwin13* ] ;then 
   export OS="mac"
