@@ -34,9 +34,9 @@ sudo rm /System/Library/LaunchAgents/org.openbsd.ssh-agent.plist
 # never show dock 
 sudo defaults write com.apple.dock autohide-time-modifier -int 500
 # reset to default
-sudo defaults delete com.apple.dock autohide-time-modifier
+defaults delete com.apple.dock autohide-time-modifier
 # disable and remove dashboard
-sudo defaults write com.apple.dashboard mcx-disabled -boolean YES
+defaults write com.apple.dashboard mcx-disabled -boolean YES
 
 # restart applications as needed
 killall Dock
