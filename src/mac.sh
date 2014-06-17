@@ -23,6 +23,10 @@ alias forward_ports='sudo ipfw add 100 fwd 127.0.0.1,8080 tcp from any to any 80
 alias non='launchctl load -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist;'
 alias noff='launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist; killall NotificationCenter'
 
+# turn ssh / remote login on or off 
+alias ssh_on='systemsetup -setremotelogin on'
+alias ssh_off='systemsetup -setremotelogin off'
+
 ###
 ### Mac GUI aliases
 ###
