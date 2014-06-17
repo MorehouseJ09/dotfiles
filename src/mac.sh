@@ -24,8 +24,8 @@ alias non='launchctl load -w /System/Library/LaunchAgents/com.apple.notification
 alias noff='launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist; killall NotificationCenter'
 
 # turn ssh / remote login on or off 
-alias ssh_on='systemsetup -setremotelogin on'
-alias ssh_off='systemsetup -setremotelogin off'
+alias ssh_on='sudo systemsetup -setremotelogin on'
+alias ssh_off='sudo systemsetup -setremotelogin off'
 
 ###
 ### Mac GUI aliases
