@@ -115,7 +115,7 @@ bind up:shift;ctrl    ${LowerLeft}
 bind down:shift;ctrl  ${LowerRight}
 
 bind m:ctrl;cmd ${FullScreen}
-bind c:ctrl;cmd ${Center}
+#bind c:ctrl;cmd ${Center}
 
 bind /:ctrl;cmd ${SnapBack}
 
