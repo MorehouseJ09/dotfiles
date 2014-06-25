@@ -6,4 +6,6 @@ gem 't'
 gem 'cocoapods'
 gem 'tmuxinator'
 gem 'pro'
+gem 'cloudapp'
+
 
