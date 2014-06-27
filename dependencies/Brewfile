@@ -54,4 +54,5 @@ install pinentry
 install pkg-config
 install pth
 install pwgen
+install imagemagick
 
