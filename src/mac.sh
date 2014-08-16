@@ -2,7 +2,7 @@
 ### Networking aliases
 ###
 # ip helpers
-alias local_ip='ipconfig getifaddr en1'
+alias local_ip='ipconfig getifaddr en0'
 
 # show open ports
 alias open_ports='netstat -vatn'
