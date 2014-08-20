@@ -121,7 +121,7 @@
   pushInsteadOf = "git://github.com/"
 
 # example: g clone gist://$GISTID
-[url "git@gist.github.com:"]
+[url "https://gist.github.com/"]
   insteadOf = "gist:"
   pushInsteadOf = "gist:"
   pushInsteadOf = "git://gist.github.com/"
