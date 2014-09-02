@@ -27,6 +27,9 @@ alias noff='launchctl unload -w /System/Library/LaunchAgents/com.apple.notificat
 alias ssh_on='sudo systemsetup -setremotelogin on'
 alias ssh_off='sudo systemsetup -setremotelogin off'
 
+# refresh mac
+alias refresh_mac='killall -KILL SystemUIServer; killall -KILL Dock; killall -KILL Finder; sudo killall coreaudiod'
+
 ###
 ### Mac GUI aliases
 ###
