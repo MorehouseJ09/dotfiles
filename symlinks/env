@@ -63,3 +63,11 @@ SSH_PUBLIC_KEY=$HOME/.ssh/id_rsa.pub
 # this is the key file that is used for sshing in (set in .ssh/config)
 SSH_IDENTITY_FILE=$HOME/.ssh/id_rsa
 
+###
+### LOCAL SETTINGS
+###
+LC_ALL=en_US.UTF-8
+LANG=en_US.UTF-8
+
+
+
