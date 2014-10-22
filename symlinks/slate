@@ -93,8 +93,7 @@ alias SnapBack undo
 alias PrevMonitor throw previous
 alias NextMonitor throw next
 
-# alias SpacePrev
-# alias SpaceNext
+# reload slate configuration
 bind 1:ctrl relaunch
 
 ### bindings / Shortcuts
@@ -114,14 +113,12 @@ bind right:shift;ctrl ${UpperRight}
 bind up:shift;ctrl    ${LowerLeft}
 bind down:shift;ctrl  ${LowerRight}
 
+# full screen
 bind m:ctrl;cmd ${FullScreen}
-#bind c:ctrl;cmd ${Center}
 
+# undo last action
 bind /:ctrl;cmd ${SnapBack}
 
-### Application switching bindings
-#bind g:ctrl;cmd focus 'Google Chrome Canary'
-#bind i:ctrl;cmd focus 'iMessage'
-
-#bind tab:cmd switch
+# snap between screens
+bind b:ctrl;cmd throw previous
 
