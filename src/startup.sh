@@ -39,3 +39,9 @@ if (( $+commands[pro] ));then
   }
 fi
 
+if (( $+commands[goop] ));then
+  if [[ -f ./Goopfile ]]; then
+    eval `goop env` 
+  fi
+fi
+
