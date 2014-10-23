@@ -122,3 +122,4 @@ bind /:ctrl;cmd ${SnapBack}
 # snap between screens
 bind b:ctrl;cmd throw previous
 
+
