@@ -45,5 +45,5 @@ if (( $+commands[goop] ));then
 fi
 
 if [[ $(type load) =~ ".*function$" && -f .env ]];then
-  load .env
+  load .env 2&> /dev/null
 fi
