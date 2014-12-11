@@ -68,6 +68,7 @@
   # branch aliases
   b = branch
   ba = branch -a
+  bd = branch -d
 
   # checkout 
   c = checkout
