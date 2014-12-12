@@ -77,7 +77,9 @@ counter=0
 for i in a b c d; do
   let counter=$counter+1
   command="fg %$counter"
-  eval alias "fg$i"='${command}'
+  kill_command="kill %$counter"
+  eval alias "f$i"='${command}'
+  eval alias "k$i"='${kill_command}'
 done
 
 # set current alias
