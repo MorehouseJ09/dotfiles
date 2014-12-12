@@ -72,6 +72,14 @@ do
   eval alias "awk$i"='${command}'
 done
 
+# background/foreground shortcuts
+counter=0
+for i in a b c d; do
+  let counter=$counter+1
+  command="fg %$counter"
+  eval alias "fg$i"='${command}'
+done
+
 # set current alias
 if [[ -f $HOME/.current ]];then
   dir=`cat $HOME/.current`
