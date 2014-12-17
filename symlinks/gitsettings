@@ -53,7 +53,7 @@
   # push
   p = push
   pf = push --force
-  pi = push --set-upstream
+  pi = !sh -c 'git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
   pt = push --tags
 
   # pull
@@ -69,6 +69,7 @@
   b = branch
   ba = branch -a
   bd = branch -d
+  bc = rev-parse --abbrev-ref HEAD
 
   # checkout 
   c = checkout
@@ -85,6 +86,14 @@
   # merge helpers
   m = merge --no-commit --no-ff
   me = merge
+  ma = merge --abort
+  mu = merge --union
+
+  # rebase helpers
+  ra = rebase --abort
+  r = rebase
+  ri = rebase -i
+  rc = rebase --continue
 
   # stash / fetch shortcuts
   st = stash
@@ -105,11 +114,16 @@
   switch = !legit switch \"$@\"
   branches = !legit branches
   sprout = !legit sprout \"$@\"
+  sc = !legit sprout $(rev-parse --abbrev-ref HEAD) \"$@\"
   unpublish = !legit unpublish \"$@\"
   harvest = !legit harvest \"$@\"
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
+
+[merge "ours"]
+  name = "Keep ours merge"
+  driver = true
 
 # useful for hub commands
 [github]
