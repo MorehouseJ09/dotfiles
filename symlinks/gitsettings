@@ -114,7 +114,7 @@
   switch = !legit switch \"$@\"
   branches = !legit branches
   sprout = !legit sprout \"$@\"
-  sc = !legit sprout $(rev-parse --abbrev-ref HEAD) \"$@\"
+  sproutc = !sh -c 'legit sprout $(git rev-parse --abbrev-ref HEAD) "$0"'
   unpublish = !legit unpublish \"$@\"
   harvest = !legit harvest \"$@\"
   sync = !legit sync \"$@\"
