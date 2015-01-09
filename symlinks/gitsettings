@@ -36,6 +36,7 @@
   # save current commit and ammend
   sa = commit -a --amend --no-edit 
   ame = commit --amend -m 
+  uncommit = reset HEAD~1 --soft   
 
   # add helpers
   a = add
