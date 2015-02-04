@@ -71,6 +71,7 @@
   ba = branch -a
   bd = branch -d
   bc = rev-parse --abbrev-ref HEAD
+  ignore = update-index --assume-unchanged
 
   # checkout 
   c = checkout
