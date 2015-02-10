@@ -22,10 +22,6 @@ if (( $+commands[keychain] )); then
   fi
 fi
 
-if (( $+commands[docker-osx] )); then
-  eval $(docker-osx env)
-fi
-
 if (( $+commands[rbenv] ));then
   eval "$(rbenv init -)"
 fi
