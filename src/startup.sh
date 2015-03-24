@@ -26,6 +26,14 @@ if (( $+commands[rbenv] ));then
   eval "$(rbenv init -)"
 fi
 
+if (( $+commands[chruby-exec] )); then
+  source /usr/local/share/chruby/chruby.sh
+  source /usr/local/share/chruby/auto.sh
+  RUBIES+=(
+    /usr/local/bin/ruby
+  )
+fi
+
 if (( $+commands[pro] ));then
   # pro cd function
   pcd() {

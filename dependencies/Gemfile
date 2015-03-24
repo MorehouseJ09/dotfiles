@@ -7,5 +7,6 @@ gem 'cocoapods'
 gem 'tmuxinator'
 gem 'pro'
 gem 'cloudapp'
+gem 'thyme'
 
 
