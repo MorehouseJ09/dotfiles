@@ -8,8 +8,5 @@ image/gif; view_attachment %s "-" /Applications/Preview.app;
 application/pdf; view_attachment %s "-" /Applications/Preview.app;
 
 # HTML
-# -- always use lynx; it's gay to use safari for this
-#text/html; view_attachment %s "-" /usr/local/bin/links;
-#text/html;                      links %s; nametemplate=%s.html
-#text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
-text/html; lynx -dump -width=78 -nolist %s; copiousoutput; needsterminal; nametemplate=%s.html
+text/html; view_attachment %s "-" /Applications.Preview.app;
+#image/gif; view_attachment %s "-" /opt/homebrew-cask/Caskroom/google-chrome-canary/latest/Google\ Chrome\ Canary.app;

@@ -11,7 +11,6 @@
 [color]
   ui = true
 
-
 [alias]
   # configuration
   cn = config --list
@@ -61,10 +60,11 @@
   pu = pull
   new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
   fp = !sh -c 'git fetch && git pull'
+  fa = fetch --all
 
   # commits
-  i = commit -m 
-  ia = commit -a -m
+  i = commit
+  ia = commit -a
 
   # branch aliases
   b = branch
