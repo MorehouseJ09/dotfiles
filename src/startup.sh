@@ -1,7 +1,7 @@
 # startup commands to be run on every new shell or reload
 if (( $+commands[keychain] )); then
   # start a new gpg-agent for this process
-  eval `keychain --eval -q`
+  eval `keychain --eval -q --agents gpg`
   export GPG_PID=`echo $GPG_AGENT_INFO | awk '{ split($0,a,":"); print a[2] }'`
   
   # handle gpg_processes
