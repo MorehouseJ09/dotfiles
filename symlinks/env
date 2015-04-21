@@ -57,17 +57,15 @@ REDIS_HOST=$CONTAINER_HOST
 ### 
 ### DEFAULT SSH KEY SETTINGS
 ### 
-SSH_PRIVATE_KEY=$HOME/.ssh/id_rsa
+SSH_PRIVATE_KEY=$HOME/.ssh/personal
 # download aws keypair and run: `ssh-keygen -y -f KEYFILE.pem` to create public key
-SSH_PUBLIC_KEY=$HOME/.ssh/id_rsa.pub
+SSH_PUBLIC_KEY=$HOME/.ssh/personal.pub
 # this is the key file that is used for sshing in (set in .ssh/config)
-SSH_IDENTITY_FILE=$HOME/.ssh/id_rsa
+SSH_IDENTITY_FILE=$HOME/.ssh/personal
 
 ###
 ### LOCAL SETTINGS
 ###
 LC_ALL=en_US.UTF-8
 LANG=en_US.UTF-8
-
-
 
