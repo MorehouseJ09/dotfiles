@@ -80,6 +80,7 @@
   # diff helpers
   df = diff
   d = diff
+  commitfiles = "!sh -c \"git show --pretty=\"format:\" --name-only \"$@\"\" -"
 
   # submodule additions
   su = submodule foreach --recursive git submodule update --init
