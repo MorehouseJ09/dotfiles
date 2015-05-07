@@ -80,11 +80,15 @@
   # diff helpers
   df = diff
   d = diff
-  commitfiles = "!sh -c \"git show --pretty=\"format:\" --name-only \"$@\"\" -"
+  commitfiles = "!sh -c \"git show --pretty=\"format:\" --name-status \"$@\"\" -"
+  commitfiles = "!sh -c \"git diff-tree --no-commit-id --name-status -r \"$@\"\" -"
 
   # submodule additions
   su = submodule foreach --recursive git submodule update --init
   sr = submodule foreach --recursive "git  add --all . && git stash && git fetch && git checkout master"
+
+  # cherry-pick
+  cp = "!sh -c \"git cherry-pick \"$@\"\" -"
 
   # merge helpers
   m = merge --no-commit --no-ff
