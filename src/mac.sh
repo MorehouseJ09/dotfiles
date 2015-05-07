@@ -8,7 +8,7 @@ alias local_ip='ipconfig getifaddr en0'
 alias open_ports='netstat -vatn'
 
 # clear dns locally
-alias clear_dns='sudo killall -HUP mDNSResponder'
+alias dns-flush='sudo discoveryutil mdnsflushcache'
 
 # show which listeners on the machine
 alias listeners='lsof -i -n | egrep "COMMAND|LISTEN"'
