@@ -10,7 +10,6 @@ PROMPT='%(!.%{$fg_bold[white]%}.%{$fg_bold[white]%})%{$fg_bold[white]%}$(machine
 # SYSTEM STUFF
 EDITOR='vim'
 
-
 ### 
 ###  Python setup
 ### 

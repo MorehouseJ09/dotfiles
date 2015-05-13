@@ -101,6 +101,7 @@
   r = rebase
   ri = rebase -i
   rc = rebase --continue
+  rs = rebase --skip
 
   # stash / fetch shortcuts
   st = stash
