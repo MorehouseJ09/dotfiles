@@ -3,6 +3,7 @@
 ###
 # ip helpers
 alias local_ip='ipconfig getifaddr en0'
+alias global_ip='curl -4 icanhazip.com'
 
 # show open ports
 alias open_ports='netstat -vatn'
