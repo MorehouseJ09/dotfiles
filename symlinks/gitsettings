@@ -71,14 +71,13 @@
   # branch aliases
   b = branch
   ba = branch -a
-  bd = branch -d
+  bd = "!sh -c \"git branch -d \"$@\" && git push origin :\"$@\"\""
   bc = rev-parse --abbrev-ref HEAD
   ignore = update-index --assume-unchanged
 
   # checkout 
   c = checkout
   co = checkout
-  sprout = !sh -c 'legit sprout $(git rev-parse --abbrev-ref HEAD) "$0"'
 
   # diff helpers
   df = diff
