@@ -36,7 +36,7 @@
 
   # save current commit and ammend
   sa = commit -a --amend --no-edit 
-  ame = commit --amend -m 
+  ame = commit --amend
   uncommit = reset HEAD~1 --soft   
 
   # add helpers
@@ -58,11 +58,12 @@
   pi = !sh -c 'git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
   pt = push --tags
 
-  # pull
   pu = pull
   new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
   fp = !sh -c 'git fetch && git pull'
   fa = fetch --all
+  resetorigin = !git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
+
 
   # commits
   i = commit
@@ -71,9 +72,12 @@
   # branch aliases
   b = branch
   ba = branch -a
-  bd = "!sh -c \"git branch -d \"$@\" && git push origin :\"$@\"\""
+  bd = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
   bc = rev-parse --abbrev-ref HEAD
   ignore = update-index --assume-unchanged
+
+  # TODO: update this to accept an optional argument
+  branchcommits = !git rev-list --count HEAD ^master
 
   # checkout 
   c = checkout
