@@ -98,3 +98,7 @@ if [[ -f $HOME/.current ]];then
   done
 fi
 
+## date shortcuts
+alias epoch='date +%s'
+alias utc='gdate --utc'
+

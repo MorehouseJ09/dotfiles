@@ -7,35 +7,36 @@ alias nose='nosetests --nocapture --nologcapture .'
 # clear a virtualenvironement after use
 function clear-virtualenv {
 
-	# remove virtualenv dependencies
-	rm -rf bin/ build/ include/ lib/
-	rm -rf man
-	rm -rf .Python
-	rm -rf docs
-	rm -rf dist
+  # remove virtualenv dependencies
+  rm -rf bin/ build/ include/ lib/
+  rm -rf man
+  rm -rf .Python
+  rm -rf pip-selfcheck.json
+  rm -rf docs
+  rm -rf dist
 
-	# now remove egg files as needed
-	rm -rf *egg(N)
-	rm -rf *eggs(N)
-	rm -rf *egg-info(N)
+  # now remove egg files as needed
+  rm -rf *egg(N)
+  rm -rf *eggs(N)
+  rm -rf *egg-info(N)
 }
 
 function install-virtualenv {
 
-	# make sure we are in a virtual environment first
-	if [ ! -d bin ]
-	then
-		virtualenv . 
-	fi
+  # make sure we are in a virtual environment first
+  if [ ! -d bin ]
+  then
+    virtualenv . 
+  fi
 
-	# source teh element
-	source bin/activate
+  # source teh element
+  source bin/activate
 
-	for i in `ls *requirements.txt 2> /dev/null` 
-	do
-		echo $i
-		pip install --ignore-installed -r $i --src eggs
-	done
+  for i in `ls *requirements.txt 2> /dev/null` 
+  do
+    echo $i
+    pip install --ignore-installed -r $i --src eggs
+  done
 }
 
 
