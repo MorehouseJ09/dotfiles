@@ -77,7 +77,7 @@
   ignore = update-index --assume-unchanged
 
   # TODO: update this to accept an optional argument
-  branchcommits = !git rev-list --count HEAD ^master
+  branchcommits = !git rev-list --count HEAD ^origin/master
 
   # checkout 
   c = checkout
