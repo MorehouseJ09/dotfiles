@@ -2,8 +2,3 @@ SHELL=/bin/bash
 
 export PS1="\[\033[1;30m\]\h:\W \u\$ \[\033[0m\]"
 
-# pro cd function
-cpd() {
-  local projDir=$(pro search $1)
-  cd ${projDir}
-}
