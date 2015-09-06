@@ -1,5 +1,4 @@
 function submodules {
-
     git submodule update --init --recursive
     
     # install oh-my-zshell
@@ -14,7 +13,6 @@ function submodules {
 }
 
 function symlinks() {
-    
     # install all symlinks to $HOME
     for dir in "$DOTFILES_DIR" "$PERSONAL_DIR"; do
         if [ ! -d $dir ]; then
@@ -24,7 +22,6 @@ function symlinks() {
             ln -f -s $dir/symlinks/$symlink $HOME/.$symlink
         done 
     done
-
 }
 
 function gpg_setup() {

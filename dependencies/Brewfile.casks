@@ -1,22 +1,22 @@
 install brew-cask
 
-# install cask files
 cask install alfred
-cask install iterm2
-cask install transmission
-cask install carbon-copy-cloner
-cask install java
-cask install vagrant
+cask install android-studio
+cask install charles
+cask install chefdk
+cask install crashlytics
 cask install dropbox
-cask install keyremap4macbook
-cask install pckeyboard
-cask install virtualbox
-cask install flowdock
-cask install vlc
+cask install flux
+cask install google-chrome
 cask install google-chrome-canary
-cask install pandoc
-cask install xquartz
-cask install google-hangouts
-cask install sizeup
-cask install handbrake
-cask install skype
+cask install iterm2-beta
+cask install java
+cask install karabiner
+cask install seil
+cask install sequel-pro
+cask install slack
+cask install slate
+cask install transmission
+cask install vagrant172
+cask install virtualbox
+cask install vlc

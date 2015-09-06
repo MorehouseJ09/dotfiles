@@ -11,14 +11,11 @@ function in_project_root {
 }
 
 function remove_function {
-
     type $1 | grep -q 'shell function'
-
 }
 
 # initialize a path segment -- grab relative path
 function path_tail {
-
   echo `pwd` | awk '{ n=split($1,a,"/")} END{ print a[n-1] "/" a[n] }'
 }
 
@@ -49,15 +46,7 @@ function custom_shell {
 }
 
 function reload {
-  
-  # check to see if current shell is zsh or not so we can load proper main files
-  if [[ $SHELL == */zsh ]];then
-
-    source $DOTFILES_DIR/bin/bootstrap.sh
-  else
-    
-    source $DOTFILES_DIR/bin/bootstrap.sh   
-  fi
+  source $DOTFILES_DIR/bin/bootstrap.sh
   
   # load up any .shell_configs
   custom_shell

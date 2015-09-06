@@ -4,9 +4,5 @@ gem 'chronic'
 gem 'personal-backlog'
 gem 't'
 gem 'cocoapods'
-gem 'tmuxinator'
 gem 'pro'
-gem 'cloudapp'
-gem 'thyme'
-
 
