@@ -10,14 +10,6 @@ alias ....='cd ../../../..'
 alias back='cd -'
 
 ###
-### Docker aliases
-###
-alias ds='docker stop $(docker ps -a -q)'
-alias dp='docker ps'
-alias da='docker ps -a'
-alias dd='docker rm $(docker ps -a -q)'
-
-###
 ### Tmux aliases
 ###
 alias tn='tmux new-session -s'
@@ -61,10 +53,6 @@ alias permissions='gstat -c "%a %n"'
 # start a simple server
 alias simple_server='python -m SimpleHTTPServer'
 
-# ec2 / aws specific
-alias ec2-host='ec2-host -r $AWS_REGION'
-alias ec2-ssh='ec2-ssh -r $AWS_REGION'
-
 function random-key {
   (export LC_ALL=C; cat /dev/urandom | \tr -dc 'a-zA-Z0-9' | fold -w $1 | head -n 1)
 }
@@ -75,6 +63,8 @@ do
   command="awk '{ print \$$i }'"
   eval alias "awk$i"='${command}'
 done
+
+alias rows_to_columns=$'awk -v RS= -v OFS=\'\\n\' \'{\$1 = \$1} 1\''
 
 # background/foreground shortcuts
 counter=0

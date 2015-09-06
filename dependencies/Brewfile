@@ -10,20 +10,11 @@ install gpg-agent
 install python
 install python3
 install pngpaste
-install postgresql
-install rabbitmq
 install readline
-install sqlite
-install redis
 install ruby
 install wget
-install zeromq
 install tree
 install zsh
-install rbenv-use
-install ruby-build
-install pyenv
-install pyenv-virtualenv
 
 # install libraries
 install autoconf
@@ -33,7 +24,6 @@ install bazaar
 install bcrypt
 install cmake
 install coreutils
-install czmq
 install gcc
 install gdbm
 install gettext

@@ -6,8 +6,6 @@ ignored=(
     "install.sh"
     "bootstrap.sh" 
     "zshell-theme.zsh"
-    "mac.sh"
-    "linux.sh"
 )
 
 for file in `ls $src_dir`
@@ -31,11 +29,4 @@ do
         load $src_dir/$file
     fi
 done
-
-# load mac / linux specific if necessary
-if [ $OS == "mac" ] ;then 
-    load $src_dir/mac.sh
-else # default to load linux
-    load $src_dir/linux.sh
-fi
 
