@@ -13,6 +13,7 @@ EDITOR='vim'
 ### 
 ###  Python setup
 ### 
+PYTHONDONTWRITEBYTECODE=1
 PYTHONSTARTUP=$HOME/.python_startup.py
 
 ### 

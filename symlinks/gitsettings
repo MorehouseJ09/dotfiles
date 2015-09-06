@@ -2,97 +2,84 @@
   excludesfile = ~/.gitignore
   editor = vim
 
-[init]
-  templatedir = ~/dotfiles/git-template
 
 [push]
   default = simple
 
+
 [color]
   ui = true
 
-[alias]
-  # configuration
-  cn = config --list
 
-  # browse shortcuts
+[alias]
+  ###
+  ### HUB SPECIFIC / BROWSING
+  ###
   bb = !sh -c 'hub browse'
   bi = !sh -c 'hub browse -- issues'
-  bj = !sh -c 'echo "open jira"'
-  bp = !sh -c 'echo "open pull request"'
   
-  # help command shortcut
-  h = help
-
-  # clone shortcut
-  cl = clone
-  clr = clone --recursive
+  ### 
+  ### SUBMODULES
+  ###
   sc = submodule update --init
   sin = submodule update --init
   sup = submodule foreach "git fetch && git stash && git checkout origin/master"
-  # clone into the public project repository list
-  clp = !sh -c 'cd $HOME/.public && hub clone "$@"' -
-  in = init
-
-  # save current commit and ammend
-  sa = commit -a --amend --no-edit 
-  ame = commit --amend
-  uncommit = reset HEAD~1 --soft   
-
-  # add helpers
-  a = add
-  aa = add --all
-  af = add --force --all
+  su = submodule foreach --recursive git submodule update --init
+  sr = submodule foreach --recursive "git  add --all . && git stash && git fetch && git checkout master"
 
   # status + logs
   s = status --short --branch
   # from http://fredkschott.com/post/2014/02/git-log-is-so-2005/
   lg = log --color --date=local --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
   # diff / changes
-  changes = diff --name-status -r
+  changedfiles = diff --name-status -r
   diffstat = diff --stat -r
+  # shows new commits in a branch
+  new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+  branchcommits = !git rev-list --count HEAD ^origin/master
+  ls = ls-tree -r --name-only HEAD
 
-  # push
+  ### 
+  ### COMMITTING / SAVING
+  ### 
+  aa = add --all
+  af = add --force --all
+
   p = push
   pf = push --force
   pi = !sh -c 'git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
   pt = push --tags
 
-  pu = pull
-  new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
+  i = commit
+  ia = commit -a
+  sa = commit -a --amend --no-edit 
+  ame = commit --amend
+  emptycommit = commit --allow-empty -m 'temporary empty commit'
+
+  ###
+  ### FETCHING / SYNCHRONIZATION
+  ###
   fp = !sh -c 'git fetch && git pull'
   fa = fetch --all
   resetorigin = !git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
-
-
-  # commits
-  i = commit
-  ia = commit -a
-
-  # branch aliases
-  b = branch
-  ba = branch -a
-  bd = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
-  bc = rev-parse --abbrev-ref HEAD
-  ignore = update-index --assume-unchanged
-
-  # TODO: update this to accept an optional argument
-  branchcommits = !git rev-list --count HEAD ^origin/master
-
-  # checkout 
-  c = checkout
   co = checkout
 
-  # diff helpers
-  df = diff
-  d = diff
-  commitfiles = "!sh -c \"git show --pretty=\"format:\" --name-status \"$@\"\" -"
-  commitfiles = "!sh -c \"git diff-tree --no-commit-id --name-status -r \"$@\"\" -"
+  cl = clone
+  clr = clone --recursive
 
-  # submodule additions
-  su = submodule foreach --recursive git submodule update --init
-  sr = submodule foreach --recursive "git  add --all . && git stash && git fetch && git checkout master"
+  ### 
+  ### BRANCH MANAGEMENT
+  ### 
+  b = branch
+  ba = branch -a
+  BD = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
+  bd = branch -D
+  bc = rev-parse --abbrev-ref HEAD
 
+
+  ### 
+  ### CHERRY PICK / MERGING 
+  ### 
   # cherry-pick
   cp = "!sh -c \"git cherry-pick \"$@\"\" -"
 
@@ -108,32 +95,34 @@
   ri = rebase -i
   rc = rebase --continue
   rs = rebase --skip
+  squashbranch = !git rebase -i HEAD~$(git branchcommits)
 
-  # stash / fetch shortcuts
+
+  ### 
+  ### STASH / FETCH
+  ###
   st = stash
-  f = fetch
-  
-  # list versioned files on the head
-  ls = ls-tree -r --name-only HEAD
+  stl = stash list
+  sta = "!sh -c \"git stash apply stash@{\"$@\"}\""
 
-  # tag shortcuts
+  ### 
+  ### TAGS
+  ###
   t = tag
   td = tag --delete
   tl = tag --list
   pt = push --tags 
-  th = help tag
-  save = !sh -c 'git sa && git pf' 
 
 
 [merge "ours"]
-  name = "Keep ours merge"
+  name = "Keep current HEAD during merge"
   driver = true
 
-# useful for hub commands
+
 [github]
   password = !security find-generic-password -gs github.password -w | tr -d '\n'
 
-# url shorthands
+
 [url "git@github.com:"]
   insteadOf = "gh:"
   insteadOf = "gist:"

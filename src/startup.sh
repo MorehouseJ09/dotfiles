@@ -51,3 +51,7 @@ fi
 if [[ $(type load) =~ ".*function$" && -f .env ]];then
   load .env 2&> /dev/null
 fi
+
+if [[ -f $HOME/.temp.sh ]]; then
+  source $HOME/.temp.sh
+fi
