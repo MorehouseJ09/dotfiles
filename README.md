@@ -1,8 +1,6 @@
-# dotfiles
+# Jon Morehouse's dotfiles
 
-> an opinionated work environment for both mac and ubuntu development 
-
-My local development stack includes zsh,tmux,vim,weechat,mutt,gpg and pass
+> My _very_ opinionated approach to dotfiles
 
 ## Solarized
 
@@ -22,10 +20,7 @@ $ git clone --recursive git@github.com:jonmorehouse/dotfiles ~/some_dir
 $ export DOTFILES_DIR=~/some_dir
 
 # install and set up a mac
-$ ./bin/mac_install.sh
-
-# install and set up linux - tested and developed primarily for ubuntu 12.04
-$ ./bin/linux_install.sh
+$ ./bin/install.sh
 
 # now install all dependencies (this will take a while and isn't required)
 $ ./bin/dependencies.sh # install brews,casks,pips,gems,npms and vim
