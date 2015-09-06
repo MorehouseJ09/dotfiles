@@ -70,7 +70,7 @@
   ### 
   ### BRANCH MANAGEMENT
   ### 
-  b = branch
+  b = for-each-ref --format='%(refname:short)' refs/heads/
   ba = branch -a
   BD = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
   bd = branch -D
