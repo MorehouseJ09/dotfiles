@@ -1,13 +1,6 @@
 # Jon Morehouse's dotfiles
 
-> My _very_ opinionated approach to dotfiles
-
-## Solarized
-
-I only use solarized, so this project assumes that you will have configured your terminal to use the solarized colorscheme. Things will probably look weird without it.
-
-* [General Installation](http://ethanschoonover.com/solarized)
-* [Chromebook / Secure Shell Installation](https://github.com/yuex/chrome-secure-shell-solarized)
+> My opinionated approach to dotfiles
 
 
 ## Installation Instructions
@@ -34,24 +27,31 @@ $ ./bin/dependencies.sh # install brews,casks,pips,gems,npms and vim
 4. `symlinks/` symlinked files for configuration
 5. `scripts/` scripts to be added to path. Global scripts / short-programs
 
-## Customizing
+## Customization
 
-This project depends upon a "personal" directory with the same structure as this project. 
+This `dotfiles` setup is meant to work hand in hand with a similarly structured `$HOME/.personal` folder. For instance, any files in `$HOME/.personal/symlinks` will be symlinked automatically to `$HOME`. Similarly, any files in `$HOME/.personal/src` will be sourced on each new shell.
 
-I recommend placing this in `$HOME/.personal`. Installation will symlink all `personal/symlinks` to `$HOME/` and will source all files in `personal/src` on startup. For me, this lives as a private repository on github.
+## Temporary Configuration
 
-## ENV Files
+You may want to change your `$ENV`, add aliases or bash commands on a project by project basis. This `dotfiles` setup supports that by optionally loading three files: `$HOME/.temp.env`, `$HOME/.temp.sh` and `$HOME/.current`.
 
-I usually have env settings for different work environments, for instance a personal env and a work environment. In my `$HOME/.personal/symlinks` I keep a `personal.env` file and a `work.env` file with settings for each environment. 
+You can add any temporary `$ENV` flags by creating and maintaining a `.temp.env` file similar to any of the other `env` files in this project (eg: https://github.com/jonmorehouse/dotfiles/blob/master/symlinks/env).
 
-By setting the environment variable `EXPORTS_FILE` you can specify a default environment to be bootstrapped at terminal startup. This will allow you to nest env files and then overlap variables by loading another one later.
+`$HOME/.temp.sh` is sourced while bootstrapping any new terminal session. You can add aliases, variables or anything else in here.
+
+Finally, `$HOME/.current` expects a text file of paths that should be aliased under the `cr` command. For instance if your `$HOME/.current` looked like this:
 
 ~~~ bash
-$ export EXPORTS_FILE=$HOME/.personal.env
-
-echo EXPORTS_FILE=$HOME/.personal.env >> $HOME/.personal/src/config.env
+$HOME/documents
+$HOME/dotfiles
 ~~~
 
+Then when you boot up a new shell, you would have two aliases:
+
+~~~ bash
+alias cr='cd $HOME/documents'
+alias cr1='cd $HOME/dotfiles'
+~~~
 
 ## GPG Agent
 
@@ -65,9 +65,12 @@ $ ln -sf $HOME/.gpg-agent.conf $HOME/.gnupg/gpg-agent.conf
 
 While only recommended for safe working conditions, adding your passphrases to $HOME/.passphrase will automatically set them on the agent. This should prevent you from ever having to enter gpg/ssh keys while working. Simply removing the file will force manual entry.
 
-## Current Alias
 
-You can optionally add a single path to `$HOME/.current` to create a cr alias to cd to your current project.
+## Solarized Color Scheme
+
+I only use solarized, so this project assumes that you will have configured your terminal to use the solarized colorscheme. Things will probably look weird without it.
+
+* [General Installation](http://ethanschoonover.com/solarized)
 
 ## References / Inspiration
 
