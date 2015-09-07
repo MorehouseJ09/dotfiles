@@ -8,22 +8,31 @@
 ~~~ sh
 $ git clone --recursive git@github.com:jonmorehouse/dotfiles $HOME/dotfiles
 
+# Install homebrew dependencies
+$ brew tap homebrew/bundle
+$ brew bundle --file=dependencies/Brewfile.setup
+$ brew bundle --file=dependencies/Brewfile
+
+# Install ruby/python dependencies from /dependencies
+$ pip install -r dependencies/requirements.txt
+$ bundle install --gemfile=dependencies/Gemfile
+
+
+
 # or install to a different directory
 $ git clone --recursive git@github.com:jonmorehouse/dotfiles ~/some_dir
 $ export DOTFILES_DIR=~/some_dir
 
 # install and set up a mac
 $ ./bin/install.sh
-
-# now install all dependencies (this will take a while and isn't required)
-$ ./bin/dependencies.sh # install brews,casks,pips,gems,npms and vim
 ~~~
+
+
 
 ## Project Structure
 
 1. `src/` shareable zsh aliases, functions and short scripts
-2. `dependencies/` shareabled dependencies for setup. [Homebrew Formulae, Gems, pip modules, npm modules]
-3. `git-template/` git template for gitconfiguration to use
+2. `dependencies/` shareable dependencies for setup. [Homebrew Formulae, Gems, pip modules, npm modules]
 4. `symlinks/` symlinked files for configuration
 5. `scripts/` scripts to be added to path. Global scripts / short-programs
 
@@ -35,7 +44,7 @@ To use the included `gitsettings`, you will need to add the following line to yo
 
 ~~~ config
 [include]
-	path = ~/.gitsettings
+  path = ~/.gitsettings
 ~~~
 
 
