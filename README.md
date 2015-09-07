@@ -27,6 +27,18 @@ $ ./bin/dependencies.sh # install brews,casks,pips,gems,npms and vim
 4. `symlinks/` symlinked files for configuration
 5. `scripts/` scripts to be added to path. Global scripts / short-programs
 
+## GitConfig
+
+This project exports a `$HOME/.gitsettings` file with shared aliases. When setting up your work environment to utilzie this project, you will need to create a `$HOME/.gitconfig` file like normal.
+
+To use the included `gitsettings`, you will need to add the following line to your `.gitconfig` file:
+
+~~~ config
+[include]
+	path = ~/.gitsettings
+~~~
+
+
 ## Customization
 
 This `dotfiles` setup is meant to work hand in hand with a similarly structured `$HOME/.personal` folder. For instance, any files in `$HOME/.personal/symlinks` will be symlinked automatically to `$HOME`. Similarly, any files in `$HOME/.personal/src` will be sourced on each new shell.
