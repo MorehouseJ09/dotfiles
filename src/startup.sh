@@ -22,36 +22,6 @@ if (( $+commands[keychain] )); then
   fi
 fi
 
-if (( $+commands[rbenv] ));then
-  eval "$(rbenv init -)"
-fi
-
-if (( $+commands[chruby-exec] )); then
-  source /usr/local/share/chruby/chruby.sh
-  source /usr/local/share/chruby/auto.sh
-  RUBIES+=(
-    /usr/local/bin/ruby
-  )
-fi
-
-if (( $+commands[pro] ));then
-  # pro cd function
-  pcd() {
-    local projDir=$(pro search $1)
-    cd ${projDir}
-  }
-fi
-
-if (( $+commands[goop] ));then
-  if [[ -f ./Goopfile ]]; then
-    eval `goop env` 
-  fi
-fi
-
 if [[ $(type load) =~ ".*function$" && -f .env ]];then
   load .env 2&> /dev/null
-fi
-
-if [[ -f $HOME/.temp.sh ]]; then
-  source $HOME/.temp.sh
 fi

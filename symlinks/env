@@ -9,6 +9,7 @@ HISTSIZE=1000000
 PROMPT='%(!.%{$fg_bold[white]%}.%{$fg_bold[white]%})%{$fg_bold[white]%}$(machine_name)$(prompt_path) $(git_prompt_info)%_$(prompt_char)%{$reset_color%} '
 # SYSTEM STUFF
 EDITOR='vim'
+PERSONAL_DIR=$HOME/.personal
 
 ### 
 ###  Python setup
@@ -26,14 +27,6 @@ GOPATH=$HOME/go
 ### Tmux startup for platform specific functionality
 ###
 TMUX_CONF=$HOME/.osx.tmux.conf
-
-###
-### EC2 SETTINGS
-###
-EC2_URL=ec2.us-west-1.amazonaws.com
-AWS_REGION=us-west-1
-AWS_DEFAULT_REGION=$AWS_REGION
-
 
 ### 
 ### DEFAULT SSH KEY SETTINGS
