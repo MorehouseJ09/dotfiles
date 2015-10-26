@@ -79,12 +79,12 @@ done
 # build aliases for current projects, as declared in the main file
 if [[ -f $HOME/.current ]];then
   main_project=`cat $HOME/.current | head -n1`
-  eval alias "cr='cd ${main_project}'"
+  eval alias "c='cd ${main_project}'"
 
   counter=0
   for line in `cat $HOME/.current | tail -n +2`; do
     let counter=$counter+1
-    eval alias "cr${counter}='cd ${line}'"
+    eval alias "c${counter}='cd ${line}'"
   done
 fi
 
