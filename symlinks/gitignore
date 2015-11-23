@@ -8,6 +8,7 @@
 *.so
 *.pyc
 a.out
+.cache
 
 # Packages #
 ############

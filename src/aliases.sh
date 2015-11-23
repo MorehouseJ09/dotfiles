@@ -43,12 +43,12 @@ alias zsh-benchmark='/usr/bin/time /usr/bin/env zsh -i -c exit'
 # Show history
 alias history='fc -l 1'
 
-# watch a command
-alias watch='watch -n 1'
-alias watch_dir='watch -n 1 "du -sh *"'
-
 # show numberical permissions on file
 alias permissions='gstat -c "%a %n"'
+
+## date shortcuts
+alias epoch='date +%s'
+alias utc='gdate --utc'
 
 # start a simple server
 alias simple_server='python -m SimpleHTTPServer'
@@ -76,19 +76,18 @@ for i in a b c d; do
   eval alias "k$i"='${kill_command}'
 done
 
-# build aliases for current projects, as declared in the main file
+# dynamically alias current projects to ca, cb, cc etc based upon the
+# directories listed in 
 if [[ -f $HOME/.current ]];then
   main_project=`cat $HOME/.current | head -n1`
   eval alias "c='cd ${main_project}'"
+  
+  mapping=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
 
   counter=0
-  for line in `cat $HOME/.current | tail -n +2`; do
+  for line in `cat $HOME/.current`; do
     let counter=$counter+1
-    eval alias "c${counter}='cd ${line}'"
+    eval alias "c${mapping[$counter]}='cd ${line}'"
   done
 fi
-
-## date shortcuts
-alias epoch='date +%s'
-alias utc='gdate --utc'
 
