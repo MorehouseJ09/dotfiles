@@ -82,7 +82,9 @@ if [[ -f $HOME/.current ]];then
   main_project=`cat $HOME/.current | head -n1`
   eval alias "c='cd ${main_project}'"
   
-  mapping=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+  # map different aliases by the alphabet, but make sure to pass over d as that
+  # would over alias cd. Maybe this should all change later on.
+  mapping=(a b c e f g h i j k l m n o p q r s t u v w x y z)
 
   counter=0
   for line in `cat $HOME/.current`; do

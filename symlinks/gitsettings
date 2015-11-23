@@ -37,6 +37,7 @@
   # shows new commits in a branch
   new = !sh -c 'git log $1@{1}..$1@{0} "$@"'
   branchcommits = !git rev-list --count HEAD ^origin/master
+  branchfiles = !git rev-list HEAD ^origin/master
   ls = ls-tree -r --name-only HEAD
 
   ### 
@@ -75,6 +76,7 @@
   BD = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
   bd = branch -D
   bc = rev-parse --abbrev-ref HEAD
+  recentbranches = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short) '
 
 
   ### 
