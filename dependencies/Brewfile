@@ -1,4 +1,5 @@
 tap 'caskroom/cask'
+tap 'caskroom/homebrew-versions'
 tap 'homebrew/versions'
 tap 'jonmorehouse/tap'
 
@@ -67,6 +68,6 @@ cask 'skype'
 cask 'slack'
 cask 'slate'
 cask 'transmission'
-cask 'vagrant'
+cask 'vagrant174'
 cask 'virtualbox'
 cask 'vlc'

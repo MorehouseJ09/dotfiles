@@ -48,6 +48,7 @@ alias permissions='gstat -c "%a %n"'
 
 ## date shortcuts
 alias epoch='date +%s'
+alias msepoch='python -c "import time; print int(time.time())*1000"'
 alias utc='gdate --utc'
 
 # start a simple server
