@@ -1,0 +1,10 @@
+. ~/.bashrc
+. /etc/bash_completion
+. ~/.vagrant_profile
+
+LIGHT_GREEN="\[\033[1;32m\]"
+YELLOW="\[\033[0;33m\]"
+BLUE="\[\033[0;34m\]"
+LIGHT_CYAN="\[\033[1;36m\]"
+WHITE="\[\033[00m\]"
+export PS1="$BLUE[$LIGHT_GREEN\u$YELLOW@$LIGHT_GREEN\H$LIGHT_CYAN \w$BLUE]$YELLOW\$(__git_ps1 \"(%s)\")$WHITE\$ "
