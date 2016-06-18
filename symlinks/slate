@@ -125,8 +125,8 @@ bind b:ctrl;cmd throw previous
 bind c:ctrl;cmd focus 'Google Chrome'
 bind c:shift;cmd focus 'Google Chrome'
 
-bind t:ctrl;cmd focus 'iTerm'
-bind t:shift;cmd focus 'iTerm'
+bind t:ctrl;cmd focus 'iTerm2'
+bind t:shift;cmd focus 'iTerm2'
 
 bind i:ctrl focus 'Messages'
 #bind tab:cmd switch
