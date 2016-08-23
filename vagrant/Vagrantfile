@@ -23,7 +23,7 @@ EOF
 Vagrant.configure(2) do |config|
   config.vm.box = 'hashicorp/precise64'
 
-  config.vm.network :private_network, ip: '01.17.19.91'
+  config.vm.network :private_network, ip: '10.51.50.91'
 
   # skip creating a local VM specific ssh key
   config.ssh.insert_key = false
