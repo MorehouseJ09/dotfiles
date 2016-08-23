@@ -129,6 +129,3 @@ bind t:ctrl;cmd focus 'iTerm2'
 bind t:shift;cmd focus 'iTerm2'
 
 bind i:ctrl focus 'Messages'
-#bind tab:cmd switch
-
-
