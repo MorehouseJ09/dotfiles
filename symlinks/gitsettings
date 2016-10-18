@@ -1,8 +1,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
-  pager = cat
-
+  pager = less -FRXK
 
 [push]
   default = simple
