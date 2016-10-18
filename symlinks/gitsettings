@@ -1,6 +1,7 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
+  pager = cat
 
 
 [push]
@@ -17,8 +18,8 @@
   ###
   bb = !sh -c 'hub browse'
   bi = !sh -c 'hub browse -- issues'
-  
-  ### 
+
+  ###
   ### SUBMODULES
   ###
   sc = submodule update --init
@@ -41,20 +42,20 @@
   branchfiles = !git rev-list HEAD ^origin/master
   ls = ls-tree -r --name-only HEAD
 
-  ### 
+  ###
   ### COMMITTING / SAVING
-  ### 
+  ###
   aa = add --all
   af = add --force --all
 
   p = push
-  pf = push --force
+  pf = push --force-with-lease
   pi = !sh -c 'git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
   pt = push --tags
 
   i = commit
   ia = commit -a
-  sa = commit -a --amend --no-edit 
+  sa = commit -a --amend --no-edit
   ame = commit --amend
   emptycommit = commit --allow-empty -m 'temporary empty commit'
 
@@ -69,9 +70,9 @@
   cl = clone
   clr = clone --recursive
 
-  ### 
+  ###
   ### BRANCH MANAGEMENT
-  ### 
+  ###
   b = for-each-ref --format='%(refname:short)' refs/heads/
   ba = branch -a
   BD = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
@@ -80,9 +81,9 @@
   recentbranches = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short) '
 
 
-  ### 
-  ### CHERRY PICK / MERGING 
-  ### 
+  ###
+  ### CHERRY PICK / MERGING
+  ###
   # cherry-pick
   cp = "!sh -c \"git cherry-pick \"$@\"\" -"
 
@@ -101,20 +102,20 @@
   squashbranch = !git rebase -i HEAD~$(git branchcommits)
 
 
-  ### 
+  ###
   ### STASH / FETCH
   ###
   st = stash
   stl = stash list
   sta = "!sh -c \"git stash apply stash@{\"$@\"}\""
 
-  ### 
+  ###
   ### TAGS
   ###
   t = tag
   td = tag --delete
   tl = tag --list
-  pt = push --tags 
+  pt = push --tags
 
 
 [merge "ours"]

@@ -9,7 +9,7 @@ MY_ZSH_THEME=$ZSH_THEME; ZSH_THEME=''
 
 # OH MY ZSH!
 source $ZSH/oh-my-zsh.sh
- 
+
 # Github issue: https://github.com/robbyrussell/oh-my-zsh/pull/1107
 source "$ZSH_CUSTOM/$MY_ZSH_THEME"
 
@@ -27,7 +27,7 @@ unsetopt cdablevarS
 unsetopt correct_all
 unsetopt nomatch
 
-if [ -z "$DOTFILES_DIR" ]; then 
+if [ -z "$DOTFILES_DIR" ]; then
 	\. $HOME/dotfiles/bin/bootstrap.sh
 else
 	\. $DOTFILES_DIR/bin/bootstrap.sh
@@ -48,4 +48,4 @@ setopt extendedglob
 # history settings
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
-
+setopt shwordsplit
