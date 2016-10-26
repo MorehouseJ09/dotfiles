@@ -1,4 +1,3 @@
-SHELL=/bin/bash
-
-export PS1="\[\033[1;30m\]\h:\W \u\$ \[\033[0m\]"
-
+set -o vi
+bind '"jk":"\e"'
+bind '"kj":"\e"'

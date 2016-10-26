@@ -48,4 +48,7 @@ setopt extendedglob
 # history settings
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
-setopt shwordsplit
+#setopt shwordsplit
+
+bindkey -s "jk" '\e'
+bindkey -s "kj" '\e'
