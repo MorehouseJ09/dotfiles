@@ -9,7 +9,7 @@ default:
     {{filepath}}
 
 # fmt, build and execute golang files
-go: 
+go:
   cmd: |
     #!/bin/bash
     clear
@@ -17,7 +17,7 @@ go:
     echo "running gofmt for $(basename {{filepath}}) ..."
     gofmt -d {{filepath}}
     echo "building $(basename {{filepath}}) ..."
-    go build -o /tmp/$(basename {{filepath}}) {{filepath}} 
+    go build -o /tmp/$(basename {{filepath}}) {{filepath}}
     echo "executing $(basename {{filepath}})"
     /tmp/$(basename {{filepath}})
 
@@ -51,7 +51,7 @@ Vagrantfile:
     set -e
     echo "executing $(basename {{filepath}}) ..."
     VAGRANT_VAGRANTFILE={{filepath}} vagrant
-    
+
 # ruby files
 rb:
   cmd: |
@@ -73,7 +73,8 @@ yml:
     try:
       with open('{{filepath}}', 'r') as fh:
         yaml.load(fh.read())
-    except yaml.YAMLError:
+    except yaml.YAMLError as e:
+      print e
       print "invalid yaml ..."
     else:
       print "valid yaml..."

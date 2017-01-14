@@ -6,6 +6,11 @@
 [push]
   default = simple
 
+[user]
+  signingkey = 9D63CD2F
+
+[commit]
+  gpgsign
 
 [color]
   ui = true

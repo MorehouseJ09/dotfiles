@@ -17,7 +17,7 @@ alias ta='tmux attach-session -t'
 alias tl='tmux list-sessions'
 alias tka='tmux kill-server'
 alias tr='tmux source-file ~/.tmux.conf'
-alias tk='tmux kill-window -t '
+alias tk='tmux kill-session -t '
 alias talt='TMUX_CONF=$HOME/.alt.tmux.conf tmux'
 alias ts='tmux switch -t'
 
@@ -78,11 +78,11 @@ for i in a b c d; do
 done
 
 # dynamically alias current projects to ca, cb, cc etc based upon the
-# directories listed in 
+# directories listed in
 if [[ -f $HOME/.current ]];then
   main_project=`cat $HOME/.current | head -n1`
   eval alias "c='cd ${main_project}'"
-  
+
   # map different aliases by the alphabet, but make sure to pass over d as that
   # would over alias cd. Maybe this should all change later on.
   mapping=(a b c e f g h i j k l m n o p q r s t u v w x y z)
