@@ -1,9 +1,16 @@
 # startup commands to be run on every new shell or reload
 if (( $+commands[keychain] )); then
+  if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+      source ~/.gnupg/.gpg-agent-info
+      export GPG_AGENT_INFO
+  else
+      eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+  fi
+
   # start a new gpg-agent for this process
   eval `keychain --eval -q --agents gpg`
   export GPG_PID=`echo $GPG_AGENT_INFO | awk '{ split($0,a,":"); print a[2] }'`
-  
+
   # handle gpg_processes
   gpg_file="/tmp/gpg_agents"
 
@@ -17,7 +24,7 @@ if (( $+commands[keychain] )); then
   echo UPDATESTARTUPTTY | gpg-connect-agent >> /dev/null
 
   # run gpg-bootstrap if we have a .passphrase file
-  if [[ -f $HOME/.passphrase ]]; then 
+  if [[ -f $HOME/.passphrase ]]; then
       $DOTFILES_DIR/scripts/gpg-bootstrap 2>&1 > /dev/null
   fi
 fi

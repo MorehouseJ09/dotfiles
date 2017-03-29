@@ -10,3 +10,5 @@ WHITE="\[\033[00m\]"
 
 export EDITOR="vim"
 export PS1="$BLUE[$LIGHT_GREEN\u$YELLOW@$LIGHT_GREEN\H$LIGHT_CYAN \w$BLUE]$YELLOW\$(__git_ps1 \"(%s)\")$WHITE\$ "
+
+alias reset_ntp='ntpdate -s time.nist.gov && serivce ntp restart'
