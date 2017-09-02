@@ -7,7 +7,7 @@ if (( $+commands[keychain] )); then
       eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
   fi
 
-  # start a new gpg-agent for this process
+  ## start a new gpg-agent for this process
   eval `keychain --eval -q --agents gpg`
   export GPG_PID=`echo $GPG_AGENT_INFO | awk '{ split($0,a,":"); print a[2] }'`
 
