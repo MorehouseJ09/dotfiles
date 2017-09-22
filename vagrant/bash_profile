@@ -1,6 +1,5 @@
 . ~/.bashrc
 . /etc/bash_completion
-. ~/.vagrant_profile
 
 LIGHT_GREEN="\[\033[1;32m\]"
 YELLOW="\[\033[0;33m\]"
