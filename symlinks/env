@@ -10,27 +10,28 @@ PROMPT='%(!.%{$fg_bold[white]%}.%{$fg_bold[white]%})%{$fg_bold[white]%}$(machine
 # SYSTEM STUFF
 EDITOR='vim'
 PERSONAL_DIR=$HOME/.personal
+TMPDIR=/tmp
 
-### 
+###
 ###  Python setup
-### 
+###
 PYTHONDONTWRITEBYTECODE=1
 PYTHONSTARTUP=$HOME/.python_startup.py
 
-### 
+###
 ### Initialize GO Settings
 ###
 # our go package location
 GOPATH=$HOME/go
 
-### 
+###
 ### Tmux startup for platform specific functionality
 ###
 TMUX_CONF=$HOME/.osx.tmux.conf
 
-### 
+###
 ### DEFAULT SSH KEY SETTINGS
-### 
+###
 SSH_PRIVATE_KEY=$HOME/.ssh/personal
 # download aws keypair and run: `ssh-keygen -y -f KEYFILE.pem` to create public key
 SSH_PUBLIC_KEY=$HOME/.ssh/personal.pub
