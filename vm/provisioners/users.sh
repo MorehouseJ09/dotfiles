@@ -5,22 +5,22 @@ set -o pipefail
 set -u
 
 echo "adding ssh key into authorized_keys ..."
-curl -s https://github.com/jonmorehouse.keys >> ~/.ssh/authorized_keys
+curl -s https://github.com/jonmorehouse.keys >> ~core/.ssh/authorized_keys
 
-touch ~/.hush_login
+touch ~core/.hush_login
 
 echo "removing .bashrc symlink ..."
-rm ~/.bashrc
+rm ~core/.bashrc
 
 echo "writing out basic .bashrc file ..."
-cat << EOF > ~/.bashrc
+cat << EOF > ~core/.bashrc
 set -o vi
 bind '"jk":"\e"'
 bind '"kj":"\e"'
 EOF
 
 echo "writing out basic .vimrc file ..."
-cat << EOF > ~/.vimrc
+cat << EOF > ~core/.vimrc
 set modeline
 imap jk <ESC>
 imap kj <ESC>
