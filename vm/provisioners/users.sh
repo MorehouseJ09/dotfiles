@@ -25,3 +25,6 @@ set modeline
 imap jk <ESC>
 imap kj <ESC>
 EOF
+
+echo "symlinking /programs into ~/programs ..."
+ln -sf /programs ~core/programs

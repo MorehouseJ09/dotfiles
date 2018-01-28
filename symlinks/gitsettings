@@ -51,6 +51,7 @@
   branchcommits = !git rev-list --count HEAD ^origin/master
   branchfiles = !git rev-list HEAD ^origin/master
   ls = ls-tree -r --name-only HEAD
+  ps = !sh -c 'git stash && git pull --rebase && git stash apply'
 
   ###
   ### COMMITTING / SAVING

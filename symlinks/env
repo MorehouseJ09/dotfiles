@@ -22,7 +22,7 @@ PYTHONSTARTUP=$HOME/.python_startup.py
 ### Initialize GO Settings
 ###
 # our go package location
-GOPATH=$HOME/go
+GOPATH=$HOME/go:$HOME/programs/go
 
 ###
 ### Tmux startup for platform specific functionality
