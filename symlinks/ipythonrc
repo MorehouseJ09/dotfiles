@@ -453,7 +453,7 @@ execute
 
 # As before, each file gets its own try/except block.
 
-execfile
+# execfile
 
 # If you are feeling adventurous, you can even add functionality to IPython
 # through here. IPython works through a global variable called __ip which
@@ -463,6 +463,7 @@ execfile
 # The file example-magic.py contains a simple but correct example. Try it:
 
 # execfile example-magic.py
+# execfile ~/.python-startup.py
 
 # Look at the examples in IPython/iplib.py for more details on how these magic
 # functions need to process their arguments.
@@ -503,5 +504,3 @@ alias
 editing_mode vi
 
 #************************* end of file <ipythonrc> ************************
-
-

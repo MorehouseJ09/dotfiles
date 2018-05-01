@@ -1,7 +1,11 @@
-# set dotfiles directory
 if [ -z "$DOTFILES_DIR" ]; then
     export DOTFILES_DIR=$HOME/dotfiles
 fi
+
+if [ -z "$PERSONAL_DIR" ]; then
+  export PERSONAL_DIR=$HOME/.personal
+fi
+
 SRC_DIR=$DOTFILES_DIR/src
 
 # load env file, shell source file or print not found message
@@ -27,7 +31,7 @@ files=(
     /etc/profile
 
     # global zsh source files
-    $SRC_DIR/load.sh 
+    $SRC_DIR/load.sh
 )
 
 # load each of the into our current shell

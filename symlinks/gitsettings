@@ -6,15 +6,8 @@
 [push]
   default = simple
 
-[user]
-  signingkey = 9D63CD2F
-
-[commit]
-  gpgsign
-
 [color]
   ui = true
-
 
 [alias]
   ###
@@ -23,6 +16,7 @@
   bb = !sh -c 'hub browse'
   bi = !sh -c 'hub browse -- issues'
 
+  author = show --pretty=medium
   ###
   ### PRS
   ###
@@ -70,6 +64,7 @@
   ame = commit --amend
   emptycommit = commit --allow-empty -m 'temporary empty commit'
 
+  du = !sh -c 'git ls-tree -r -t -l --full-name HEAD | grep blob | sort -n -k 4 -r'
   ###
   ### FETCHING / SYNCHRONIZATION
   ###
