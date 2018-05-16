@@ -4,3 +4,4 @@ grip==2.0.1
 tornado==4.3
 flake8==2.5.1
 ipython==4.0.1
+PyYaml==3.12
