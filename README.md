@@ -1,5 +1,4 @@
 # Jon Morehouse's dotfiles
-
 > My opinionated approach to dotfiles
 
 
@@ -10,13 +9,10 @@ $ git clone --recursive git@github.com:jonmorehouse/dotfiles $HOME/dotfiles
 
 # Install homebrew dependencies
 $ brew tap homebrew/bundle
-$ brew bundle --file=dependencies/Brewfile.setup
 $ brew bundle --file=dependencies/Brewfile
 
 # Install ruby/python dependencies from /dependencies
 $ pip install -r dependencies/requirements.txt
-$ bundle install --gemfile=dependencies/Gemfile
-
 
 
 # or install to a different directory

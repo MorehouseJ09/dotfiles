@@ -1,6 +1,4 @@
 tap 'caskroom/cask'
-tap 'caskroom/homebrew-versions'
-tap 'homebrew/versions'
 tap 'jonmorehouse/tap'
 
 brew 'ack'
