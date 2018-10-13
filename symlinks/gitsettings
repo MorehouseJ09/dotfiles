@@ -46,6 +46,9 @@
   branchfiles = !git rev-list HEAD ^origin/master
   ls = ls-tree -r --name-only HEAD
   ps = !sh -c 'git stash && git pull --rebase && git stash apply'
+  lastcommit = rev-list -1 HEAD
+  lastcommitepoch = log -1 --pretty=format:%ct
+  lastcommitts = log -1 --pretty=format:%cd
 
   ###
   ### COMMITTING / SAVING
