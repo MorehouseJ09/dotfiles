@@ -97,3 +97,12 @@ json:
     else:
       print "valid json ..."
     EOF
+
+scala:
+  cmd: |
+    #!/usr/bin/env bash
+
+    clear
+    set -e
+    echo "scala flow ..."
+    /usr/bin/env scala {{filepath}}
