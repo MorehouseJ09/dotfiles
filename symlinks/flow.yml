@@ -100,9 +100,19 @@ json:
 
 scala:
   cmd: |
+    echo "scala flow ..."
+    /usr/bin/env scala {{filepath}}
+
+md:
+  cmd: |
     #!/usr/bin/env bash
+
+    if [ -x "$(command -v mdl)" ]; then
+      echo "please install the ruby gem `mdl`..."
+      exit 1
+    fi
 
     clear
     set -e
-    echo "scala flow ..."
-    /usr/bin/env scala {{filepath}}
+
+    mdl {{filepath}}
