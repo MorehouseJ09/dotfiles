@@ -75,6 +75,7 @@
   ###
   fp = !sh -c 'git fetch && git pull'
   fa = fetch --all
+  fo = fetch origin
   resetorigin = !git fetch origin && git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)
   co = checkout
 
