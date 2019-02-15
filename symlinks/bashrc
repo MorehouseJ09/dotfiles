@@ -13,3 +13,5 @@ export PS1="$BLUE[$LIGHT_GREEN\u$YELLOW@$LIGHT_GREEN\H$LIGHT_CYAN \w$BLUE]$YELLO
 export SSH_USER=jonmorehouse
 
 alias reset_ntp='ntpdate -u time.nist.gov; service ntp restart'
+
+export PATH=$HOME/.toolbox/bin:$PATH
