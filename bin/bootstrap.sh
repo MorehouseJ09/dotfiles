@@ -59,5 +59,10 @@ then
 fi
 
 load $HOME/.personal.env
-load $HOME/.temp.env
-load $HOME/.temp.sh
+if [ -f $HOME/.temp.env ]; then
+  load $HOME/.temp.env
+fi
+
+if [ -f $HOME/.temp.sh ]; then
+  load $HOME/.temp.sh
+fi
