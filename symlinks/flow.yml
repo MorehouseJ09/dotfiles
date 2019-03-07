@@ -100,6 +100,8 @@ json:
 
 scala:
   cmd: |
+    #!/usr/bin/env
+
     echo "scala flow ..."
     /usr/bin/env scala {{filepath}}
 

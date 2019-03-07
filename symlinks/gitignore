@@ -1,5 +1,6 @@
 # Compiled source #
 ###################
+build
 *.com
 *.class
 *.dll
@@ -52,7 +53,7 @@ Thumbs.db
 ######## WEB SPECIFIC EXCLUDES #######
 components* #this is the bower install
 *.sass-cache* #sass install
-*.dotcloud* #dotcloud 
+*.dotcloud* #dotcloud
 
 
 ########## GLOBAL FILES ############
