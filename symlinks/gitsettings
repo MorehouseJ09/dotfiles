@@ -92,8 +92,7 @@
   BD = "!sh -c \"git branch -D \"$@\" && git push origin :\"$@\"\""
   bd = branch -D
   bc = rev-parse --abbrev-ref HEAD
-  recentbranches = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(refname:short) '
-
+  recentbranches = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 
   ###
   ### CHERRY PICK / MERGING
