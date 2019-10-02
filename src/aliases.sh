@@ -63,6 +63,8 @@ for i in {1..20}
 do
   command="awk '{ print \$$i }'"
   eval alias "awk$i"='${command}'
+  command="awk '{ split(\$0,a,\",\"); print a[$i] }'"
+  eval alias "awkcomma$i"='${command}'
 done
 
 alias rows_to_columns=$'awk -v RS= -v OFS=\'\\n\' \'{\$1 = \$1} 1\''
