@@ -32,6 +32,8 @@
   su = submodule foreach --recursive git submodule update --init
   sr = submodule foreach --recursive "git  add --all . && git stash && git fetch && git checkout master"
 
+  cleanup = "! git remote prune origin ; git branch --merged | grep -v master | xargs git branch -d"
+
   # status + logs
   s = status --short --branch
   # from http://fredkschott.com/post/2014/02/git-log-is-so-2005/
