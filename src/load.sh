@@ -9,7 +9,6 @@ ignored=(
 
 for file in `ls $SRC_DIR`
 do
-
     found=
     for ignore in ${ignored[@]}
     do

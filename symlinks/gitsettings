@@ -48,6 +48,7 @@
   branchfiles = !git rev-list HEAD ^origin/master
   ls = ls-tree -r --name-only HEAD
   ps = !sh -c 'git stash && git pull --rebase && git stash apply'
+  unmerged = !sh -c 'git branch --no-merged master | xargs -I "{}" git cherry -v master {}'
   currentcommit = show --stat HEAD
   lastcommit = show --stat HEAD~1
   lastcommithash = rev-list -1 HEAD
