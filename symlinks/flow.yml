@@ -39,9 +39,9 @@ py:
     clear
     set -e
     echo "running flake8 ..."
-    flake8 --max-line-length=120 {{filepath}}
+    #flake8 --max-line-length=120 {{filepath}}
     echo "executing $(basename {{filepath}}) ...".
-    /usr/bin/env python {{filepath}}
+    /usr/bin/env python3 {{filepath}}
 
 # Vagrantfiles
 Vagrantfile:

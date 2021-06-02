@@ -122,8 +122,8 @@ bind /:ctrl;cmd ${SnapBack}
 # snap between screens
 bind b:ctrl;cmd throw previous
 
-bind c:ctrl;cmd focus 'Google Chrome'
-bind c:shift;cmd focus 'Google Chrome'
+bind c:ctrl;cmd focus 'Brave Browser'
+bind c:shift;cmd focus 'Brave Browser'
 
 bind t:ctrl;cmd focus 'iTerm2'
 bind t:shift;cmd focus 'iTerm2'
