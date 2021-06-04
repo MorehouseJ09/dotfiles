@@ -23,3 +23,8 @@ fi
 if [[ $(type load) =~ ".*function$" && -f .env ]];then
   load .env 2&> /dev/null
 fi
+
+if ! ssh-add -l > /dev/null; then
+  echo "adding ssh-key for new session"
+  ssh-add ~/.ssh/id_rsa
+fi
